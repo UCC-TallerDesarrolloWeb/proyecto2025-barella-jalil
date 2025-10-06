@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Asesoramiento - Procraft Parts</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="imagenes/logos/logotipo 3.png" alt="PROCRAFT PARTS"></a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+                <li><a href="proyecto.html">PROYECTOS</a></li>
+                <li><a href="quienes.html">¿QUIENES SOMOS?</a></li>
+                <li><a href="solicitar-asesoramiento.html" class="activo">SOLICITAR ASESORAMIENTO</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="linea-naranja"></div>
+</header>
+
+<main class="asesoramiento-main">
+    <section class="hero-asesoramiento">
+        <div class="container">
+            <h1>SOLICITAR ASESORAMIENTO</h1>
+            <p>Completá el formulario y nos contactaremos a la brevedad</p>
+        </div>
+    </section>
+
+    <section class="formulario-asesoramiento">
+        <div class="container">
+            <form id="form-asesoramiento" class="formulario">
+                <!-- Información Personal -->
+                <div class="form-seccion">
+                    <h2>Información Personal</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            <span class="error-message" id="error-nombre"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="apellido">Apellido *</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                            <span class="error-message" id="error-apellido"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="error-email"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" maxlength="10" required>
+                            <span class="error-message" id="error-telefono"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información del Vehículo -->
+                <div class="form-seccion">
+                    <h2>Información del Vehículo</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="marca">Marca del vehículo *</label>
+                            <input type="text" id="marca" name="marca" required>
+                            <span class="error-message" id="error-marca"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="modelo">Modelo del vehículo *</label>
+                            <input type="text" id="modelo" name="modelo" required>
+                            <span class="error-message" id="error-modelo"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="patente">Patente *</label>
+                            <input type="text" id="patente" name="patente" required>
+                            <span class="error-message" id="error-patente"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="uso">Uso principal *</label>
+                            <select id="uso" name="uso" required>
+                                <option value="">Seleccionar uso</option>
+                                <option value="urbano">Urbano</option>
+                                <option value="rural">Rural</option>
+                                <option value="ruta">Ruta</option>
+                            </select>
+                            <span class="error-message" id="error-uso"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tipo de Mejoras -->
+                <div class="form-seccion">
+                    <h2>Mejoras Deseadas</h2>
+
+                    <div class="form-group">
+                        <label>Me gustaría mejoras en:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="mejoras" value="mecanicas"> Mecánicas
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="mejoras" value="esteticas"> Estéticas
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="mejoras" value="audio"> De audio
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="mejoras" value="iluminacion"> De iluminación
+                            </label>
+                        </div>
+                        <span class="error-message" id="error-mejoras"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="importacion">Importación de accesorios *</label>
+                        <textarea id="importacion" name="importacion"
+                                  placeholder="Describí qué accesorios te gustaría importar..." required></textarea>
+                        <span class="error-message" id="error-importacion"></span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-enviar">SOLICITAR ASESORAMIENTO</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
