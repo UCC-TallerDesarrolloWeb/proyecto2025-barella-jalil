@@ -1,0 +1,16 @@
+# Archivos y carpetas de macOS
+.DS_Store
+__MACOSX/
+
+# Configuración del IDE (VS Code, IntelliJ, etc.)
+.idea/
+*.iml
+
+# Archivos temporales / logs
+*.log
+*.tmp
+
+# Sistema de despliegue / cache local
+node_modules/
+dist/
+.vscode/
