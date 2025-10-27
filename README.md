@@ -51,30 +51,17 @@ Recursos: **Google Fonts (Montserrat, Bebas Neue)**, íconos SVG, media responsi
 > Vista resumida (carpetas y archivos principales)
 
 ```
-├── .idea/
-│   ├── .gitignore
-│   ├── modules.xml
-│   ├── proyecto .iml
-│   └── workspace.xml
 ├── css/
 │   └── estilos.css
 ├── imagenes/
 │   ├── abarth/
 │   │   ├── abarth 1.jpg
-│   │   ├── abarth 2.jpg
-│   │   ├── abarth 3.jpg
-│   │   ├── abarth 4.jpg
-│   │   ├── correllave.jpg
-│   │   ├── llantaabarth.jpg
-│   │   ├── llavepersonalizada.jpg
-│   │   ├── sabelt.abarth.jpg
-│   │   ├── tapaaceite.abarth.jpg
-│   │   └── tapanafta.abarth.jpg
+│   │   
 │   ├── bmw/
 │   │   └── stereo.jpg
-│   ├── carrusel/
+│   ├── inicio/
 │   │   ├── carrusel_1.jpg
-│   │   └── carrusel_2.png
+│   │   
 │   ├── iconos/
 │   │   ├── camion.png
 │   │   ├── comentario.png
@@ -82,30 +69,22 @@ Recursos: **Google Fonts (Montserrat, Bebas Neue)**, íconos SVG, media responsi
 │   │   └── mensaje.png
 │   ├── logos/
 │   │   ├── logo.png
-│   │   ├── logo2.png
-│   │   ├── logotipo 2.jpg
 │   │   └── logotipo 3.png
 │   ├── quienes/
-│   │   ├── juan.png
-│   │   ├── logo-quienes.png
 │   │   └── quienes-somos.png
 │   ├── ram/
 │   │   ├── esc-m.jpg
 │   │   ├── fenderlargo.jpg
-│   │   ├── fenders-m.jpg
 │   │   ├── letras y opticas-g.jpg
-│   │   ├── parrilla-g.jpg
 │   │   ├── rack.png
 │   │   └── RAMLUCES.png
 │   ├── ramb/
 │   │   └── frente.png
-│   └── .DS_Store
 ├── js/
 │   └── scripts.js
 ├── videos/
 │   ├── luz.mp4
 │   └── luz.webm
-├── .DS_Store
 ├── asesoramiento.html
 ├── index.html
 ├── proyectos.html
@@ -130,10 +109,8 @@ Recursos: **Google Fonts (Montserrat, Bebas Neue)**, íconos SVG, media responsi
 
 ## 🏫 Información Académica
 - **Universidad:** Universidad Católica de Córdoba (UCC)  
-- **Materia:** Taller de Desarrollo Web — Laboratorio de Computación II  
+- **Materia:** Taller de Desarrollo Web 
 - **Año:** 2025  
-- **Tipo:** Proyecto académico (Parcial)  
+- **Tipo:** Proyecto (Parcial)  
 
 ---
-
-_Desarrollado con 💙 para el Taller de Desarrollo Web — UCC 2025_
