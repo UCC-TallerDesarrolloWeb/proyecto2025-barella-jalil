@@ -1,68 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quiénes Somos? - Procraft Parts</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PROCRAFT PARTS</title>
+  <meta name="description" content="Pestaña cin una breve descripcion de quines somos." />
+  <meta name="author" content="Máximo Barella y Carola Jalil" />
+  <meta name="keywords" content="proyectos, accesorios 4x4, instalación, galería" />
+
+  <link rel="icon" href="imagenes/logos/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-<header>
-    <div class="container">
-        <div class="logo">
-            <a href="index.html"><img src="imagenes/logos/logotipo 3.png" alt="PROCRAFT PARTS"></a>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="servicios.html">SERVICIOS</a></li>
-                <li><a href="proyecto.html">PROYECTOS</a></li>
-                <li><a href="quienes.html" class="activo">¿QUIENES SOMOS?</a></li>
-                <li><a href="solicitar.html" class="btn-asesoramiento">SOLICITAR ASESORAMIENTO</a></li>
-            </ul>
-        </nav>
+
+<body class="proyectos">
+  <header class="header" id="site-header">
+    <div class="container header__wrap">
+      <div class="logo">
+        <a href="index.html" aria-label="Ir al inicio">
+          <img src="imagenes/logos/logotipo 3.png" alt="Logotipo de PROCRAFT PARTS">
+        </a>
+      </div>
+      <h1 id="site-title" class="site-title">
+        <a href="index.html">PROCRAFT PARTS</a>
+      </h1>
+      <button id="menu-btn" class="menu-btn" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false">☰</button>
+      <nav id="nav" class="menu" role="navigation">
+        <ul class="menu__list">
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="proyectos.html" >PROYECTOS</a></li>
+          <li><a href="quienes.html"class="activo">¿QUIÉNES SOMOS?</a></li>
+          <li><a href="asesoramiento.html" class="btn-asesoramiento">SOLICITAR ASESORAMIENTO</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="linea-naranja"></div>
-</header>
+    <div class="linea-naranja" aria-hidden="true"></div>
+  </header>
 
+<section id="quienes-somos" class="about">
+  <div class="container">
+    <h1 class="about__title">Quiénes Somos</h1>
 
-<main>
-    <section class="hero-quienes-somos">
-        <div class="container">
-            <h1>¿QUIÉNES SOMOS?</h1>
-        </div>
-    </section>
+    <p class="about__text">
+      Somos Lucas y Juan, ingenieros graduados en la UTN (uno mecánico y el otro informático).
+      Nuestra pasión por los fierros nos llevó a dedicarnos de lleno al mundo de la
+      <strong>personalización de vehículos</strong>. Decidimos diferenciarnos ofreciendo una
+      instalación profesional y cercana, realizada en la casa del cliente: vos no tenés que sacar
+      tu vehículo; nosotros vamos, te asesoramos y lo dejamos listo.
+    </p>
 
-    <section class="quienes-somos-content">
-        <div class="container">
-            <div class="quienes-somos-grid">
-                <div class="texto-section">
-                    <div class="texto-content">
-                        <p>Somos <strong>Lucas y Juan</strong>, dos amigos que unimos nuestras profesiones y nuestra
-                            pasión por los autos para crear Procraft Parts.</p>
-                        <p><strong>Lucas</strong> es ingeniero en sistemas, fanático del detalle y de la tecnología
-                            aplicada al mundo automotor. <strong>Juan</strong> es ingeniero mecánico, con años de
-                            experiencia en personalización y reparación de vehículos.</p>
-                        <p>Juntos ofrecemos un servicio completo de asesoramiento, importación e instalación de
-                            accesorios, pensado para quienes quieren que su vehículo se vea y rinda al máximo.</p>
-                        <div class="destacado">
-                            <p><strong>MÁS QUE PIEZAS, BRINDAMOS CONFIANZA, PRECISIÓN Y ESTILO EN CADA
-                                PROYECTO.</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="imagen-section">
-                    <div class="imagen-container">
-                        <img src="imagenes/quienes/quienes-somos.png" alt="Lucas y Juan - Fundadores de Procraft Parts">
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-</main>
-
-
-<script src="scripts.js"></script>
-</body>
-</html>
+    <div class="about__media">
+      <figure class="about__img">
+        <img src="imagenes/quienes/quienes-somos.png" alt="Instalación a domicilio en vehículo del cliente" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+  
+<footer class="footer" id="site-footer" role="contentinfo">
+    <div class="linea-naranja" aria-hidden="true"></div>
+    <div class="container footer__wrap">
+      <p>PROCRAFT PARTS. Todos los derechos reservados.</p>
+      <ul class="social">
+        <li>
+          <a href="https://www.instagram.com/procraftparts?igsh=MW1vNzJveGpmYjlwdQ==" target="_blank" rel="noopener"
+             aria-label="Instagram de PROCRAFT PARTS">
+            <svg class="social__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM17.75 6a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.75 6z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+<script src="js/scripts.js" defer></script>

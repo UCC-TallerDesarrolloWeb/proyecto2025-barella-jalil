@@ -1,207 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos - FIAT 595 ABARTH</title>
-    <link rel="stylesheet" href="css/estilos.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PROCRAFT PARTS</title>
+  <meta name="description" content="Galería de proyectos: instalación y personalización en vehículos." />
+  <meta name="author" content="Máximo Barella y Carola Jalil" />
+  <meta name="keywords" content="proyectos, accesorios 4x4, instalación, galería" />
+
+  <link rel="icon" href="imagenes/logos/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-<header>
-    <div class="container">
-        <div class="logo">
-            <a href="#"><img src="imagenes/logos/logotipo 3.png" alt="PROCRAFT PARTS"></a>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="servicios.html">SERVICIOS</a></li>
-                <li><a href="proyecto.html" class="activo">PROYECTOS</a></li>
-                <li><a href="quienes.html">¿QUIENES SOMOS?</a></li>
-                <li><a href="solicitar.html" class="btn-asesoramiento">SOLICITAR ASESORAMIENTO</a></li>
-            </ul>
-        </nav>
+
+<body class="proyectos">
+  <header class="header" id="site-header">
+    <div class="container header__wrap">
+      <div class="logo">
+        <a href="index.html" aria-label="Ir al inicio">
+          <img src="imagenes/logos/logotipo 3.png" alt="Logotipo de PROCRAFT PARTS">
+        </a>
+      </div>
+      <h1 id="site-title" class="site-title">
+        <a href="index.html">PROCRAFT PARTS</a>
+      </h1>
+      <button id="menu-btn" class="menu-btn" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false">☰</button>
+      <nav id="nav" class="menu" role="navigation">
+        <ul class="menu__list">
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="proyectos.html" class="activo">PROYECTOS</a></li>
+          <li><a href="quienes.html">¿QUIÉNES SOMOS?</a></li>
+          <li><a href="asesoramiento.html" class="btn-asesoramiento">SOLICITAR ASESORAMIENTO</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="linea-naranja"></div>
-</header>
+    <div class="linea-naranja" aria-hidden="true"></div>
+  </header>
 
-<main class="proyectos-main">
-    <section class="proyectos-section">
-        <h1>Nuestros Proyectos</h1>
 
-        <div class="proyectos-grid">
+  <main id="contenido">
+    <section id="galeria-proyectos" class="container" aria-label="Galería de proyectos">
+      <div class="grid--galeria">
+        
+    <figure class="galeria__item">
+  <div class="galeria__frame">
+    <video class="galeria__media" controls preload="metadata" playsinline>
+      <source src="videos/luz.webm" type="video/webm">
+      <source src="videos/luz.mp4"  type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+  <figcaption class="galeria__caption">
+    Iluminación LED: barras y faros auxiliares instalados
+  </figcaption>
+</figure>
 
-            <!-- PROYECTO 1 - FIAT 595 ABARTH -->
-            <div class="proyecto-card" data-marca="fiat">
-                <div class="proyecto-header">
-                    <h2>FIAT 595 ABARTH</h2>
-                </div>
+        <figure class="galeria__item">
+          <div class="galeria__frame">
+            <img class="galeria__media" src="imagenes/ramb/frente.png" alt="Barras LED y faros auxiliares">
+          </div>
+          <figcaption class="galeria__caption">Ópticas importadas, ganchos y parrillas (acabado Rust-Oleum)</figcaption>
+        </figure>
 
-                <div class="galeria-grid">
-                    <div class="galeria-item" data-tipo="completa">
-                        <img data-src="imagenes/abarth/abarth 1.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="medio">
-                        <img data-src="imagenes/abarth/abarth 3.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="medio">
-                        <img data-src="imagenes/abarth/abarth 4.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="medio">
-                        <img data-src="imagenes/abarth/llantaabarth.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="detalle">
-                        <img data-src="imagenes/abarth/abarth 2.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="detalle">
-                        <img data-src="imagenes/abarth/sabelt.abarth.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="detalle">
-                        <img data-src="imagenes/abarth/tapaaceite.abarth.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="detalle">
-                        <img data-src="imagenes/abarth/tapanafta.abarth.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="detalle">
-                        <img data-src="imagenes/abarth/correllave.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="detalle">
-                        <img data-src="imagenes/abarth/llavepersonalizada.jpg" loading="lazy"
-                             src=""
-                             alt="FIAT 595 ABARTH"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                </div>
+        <figure class="galeria__item">
+          <div class="galeria__frame">
+            <img class="galeria__media" src="imagenes/ram/rack.png" alt="Racks y portaequipajes">
+          </div>
+          <figcaption class="galeria__caption">Rack + portaequipajes + caja de herramientas</figcaption>
+        </figure>
 
-                <!-- DESCRIPCIÓN DEL PROYECTO -->
-                <div class="proyecto-descripcion">
-                    <div class="descripcion-header">
-                        <h3>procraftparts</h3>
-                        <p class="slogan">El estilo Abarth, llevado un paso más allá.</p>
-                    </div>
+        <figure class="galeria__item">
+          <div class="galeria__frame">
+            <img class="galeria__media" src="imagenes/ram/fenderlargo.jpg" alt="Protectores y fenders">
+          </div>
+          <figcaption class="galeria__caption">Fenders y protectores con setup de cubiertas</figcaption>
+        </figure>
 
-                    <div class="modificaciones-list">
-                        <h4>A este Fiat 595 Abarth le sumamos:</h4>
-                        <ul>
-                            <li>✅ Upgrade de Inlet FORGE</li>
-                            <li>✅ Luces de giro traseras LED</li>
-                            <li>✅ Luces LED de pariente y de baul sin error</li>
-                            <li>✅ Upgrade de Xenon OSRAM 8k</li>
-                            <li>✅ Antena Corta Stubby</li>
-                            <li>✅ Giros laterales LED dinámicos</li>
-                            <li>✅ Badges 595 y Turismo negras</li>
-                            <li>✅ Centro de llantas negros</li>
-                            <li>✅ Separadores de llanta 12mm adelante y 15mm atrás</li>
-                            <li>✅ Juego de bulones cromados nuevos</li>
-                            <li>✅ Tapa de Nafta, Aceite y Agua Abarth de Aluminio</li>
-                            <li>✅ Tirador Sabelt en portón trasero</li>
-                            <li>✅ Apple carplay inalambrico</li>
-                            <li>✅ Aplique faros traseros en carbono</li>
-                            <li>✅ Servicio de mantenimiento con filtros originales</li>
-                            <li>✅ Reemplazo de sonda lambda original Abarth</li>
-                            <li>✅ Reemplazo de conector de 12v original</li>
-                        </ul>
-                    </div>
-                </div>
-            </div> <!-- CIERRA PROYECTO FIAT -->
+          <figure class="galeria__item">
+          <div class="galeria__frame">
+            <img class="galeria__media" src="imagenes/abarth/abarth 1.jpg" alt="Protectores y fenders">
+          </div>
+          <figcaption class="galeria__caption">Centro de llanta Abarth negro y Centro de optica en fibra de carbono</figcaption>
+        </figure>
 
-            <!-- PROYECTO 2 - RAM 1500 -->
-            <div class="proyecto-card" data-marca="ram"> <!-- CAMBIÉ data-marca a "ram" -->
-                <div class="proyecto-header">
-                    <h2>RAM 1500</h2>
-                </div>
+        <figure class="galeria__item">
+          <div class="galeria__frame">
+            <img class="galeria__media" src="imagenes/bmw/stereo.jpg" alt="Protectores y fenders">
+          </div>
+          <figcaption class="galeria__caption">Instalacion de Stereo para BMW</figcaption>
+        </figure>
 
-                <div class="galeria-grid">
-                    <div class="galeria-item" data-tipo="completa">
-                        <img data-src="imagenes/ram/parrilla-g.jpg" loading="lazy"
-                             src=""
-                             alt="RAM 1500"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="completa">
-                        <img data-src="imagenes/ram/letras y opticas-g.jpg" loading="lazy"
-                             src=""
-                             alt="RAM 1500"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="medio">
-                        <img data-src="imagenes/ram/esc-m.jpg" loading="lazy"
-                             src=""
-                             alt="RAM 1500"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                    <div class="galeria-item" data-tipo="medio">
-                        <img data-src="imagenes/ram/fenders-m.jpg" loading="lazy"
-                             src=""
-                             alt="RAM 1500"
-                             class="lazy-image"
-                             width="800" height="450">
-                    </div>
-                </div> <!-- CIERRA GALERIA-GRID DE RAM -->
+        <figure class="galeria__item">
+          <div class="galeria__frame">
+            <img class="galeria__media" src="imagenes/ram/RAMLUCES.png" alt="Protectores y fenders">
+          </div>
+          <figcaption class="galeria__caption">Instalacion de Parrilla personalizada con luces, Luces en el techo, Barra led en el paragolpes que fue pintado de negro mate </figcaption>
+        </figure>
+       
+           <figure class="galeria__item">
+          <div class="galeria__frame">
+            <img class="galeria__media" src="imagenes/ram/esc-m.jpg" alt="Protectores y fenders">
+          </div>
+          <figcaption class="galeria__caption"> Escape Akrapovic importado</figcaption>
+        </figure>
 
-                <div class="proyecto-descripcion">
-                    <div class="descripcion-header">
-                        <h3>procraftparts</h3>
-                        <p class="slogan">Potencia y estilo americano</p> <!-- AGREGAR SLOGAN -->
-                    </div>
+           <figure class="galeria__item">
+          <div class="galeria__frame">
+            <img class="galeria__media" src="imagenes/ram/letras y opticas-g.jpg" alt="Protectores y fenders">
+          </div>
+          <figcaption class="galeria__caption"> Letras y paragolpes en negro mate, instalacion de opticas importadas</figcaption>
+        </figure>
 
-                    <div class="modificaciones-list">
-                        <h4>A esta Ram 1500 le sumamos:</h4>
-                        <ul>
-                            <li>✅ Instalación de escape Akrapovic</li>
-                            <li>✅ Instalación de parrilla</li>
-                            <li>✅ Personalización en negro mate de las letras RAM</li>
-                            <li>✅ Instalación de ópticas traseras</li>
-                            <li>✅ Instalación de fenders</li>
-                        </ul>
-                    </div>
-                </div>
-            </div> <!-- CIERRA PROYECTO RAM -->
+      </div>
+    </section>
+  </main>
 
-        </div> <!-- CIERRA PROYECTOS-GRID -->
-    </section> <!-- CIERRA PROYECTOS-SECTION -->
-</main> <!-- CIERRA MAIN -->
-
-<script src="js/scripts.js"></script>
-</body>
-</html>
+  
+  <footer class="footer" id="site-footer" role="contentinfo">
+    <div class="linea-naranja" aria-hidden="true"></div>
+    <div class="container footer__wrap">
+      <p>PROCRAFT PARTS. Todos los derechos reservados.</p>
+      <ul class="social">
+        <li>
+          <a href="https://www.instagram.com/procraftparts?igsh=MW1vNzJveGpmYjlwdQ==" target="_blank" rel="noopener"
+             aria-label="Instagram de PROCRAFT PARTS">
+            <svg class="social__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM17.75 6a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.75 6z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+<script src="js/scripts.js" defer></script>
