@@ -1,7 +1,5 @@
 import "@/styles/main.scss";
 import Boton from "../components/Boton";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 
 function Home() {
   return (
@@ -20,7 +18,7 @@ function Home() {
           <img src="/imagenes/inicio/carrusel_1.jpg" alt="Portada del vehículo" />
           </div>
         </div>
-        <div className="linea-naranja" aria-hidden="true"></div>
+      <div className="linea-naranja" aria-hidden="true"></div>
       </section>
 
       {/* PROYECTOS */}
@@ -67,7 +65,6 @@ function Home() {
         </div>
       </section>
 
-           <Footer />
 
     </main>
   );

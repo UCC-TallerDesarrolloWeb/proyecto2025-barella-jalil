@@ -16,23 +16,26 @@
   font-size: 1rem;
 
   background: transparent;
-  color: $color-text;     // blanco en estado normal
+  color: $color-text;    
   cursor: pointer;
   transition: background .25s ease, color .25s ease, border-color .25s ease;
 
   &:hover {
-    background: $color-accent; // naranja
-    color: $color-bg-dark;     // 🔵 texto azul oscuro (pedido)
+    background: $color-accent; 
+    color: $color-bg-dark;     
     border-color: $color-accent;
   }
 }
 
-/* En el menú, reforzamos la victoria del color en hover */
+.btn-asesoramiento--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 .header .menu__list .btn-asesoramiento:hover {
-  color: $color-bg-dark; // 🔵 asegura texto azul oscuro
+  color: $color-bg-dark; 
 }
 
-/* Grillas */
 .grid--galeria { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .grid--dos { display: flex; flex-wrap: wrap; gap: 16px; }
 .grid--dos > * { flex: 1 1 280px; }

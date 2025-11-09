@@ -19,23 +19,113 @@
     margin: 16px 0;
   }
 }
+.linea-naranja {
+    height: 4px;
+    background: $color-accent;
+  }
+/* Galería de Home: figura > a > img + figcaption */
+.proyectos-home .grid--galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
 
-/* Servicios */
+.proyectos-home .galeria__item a {
+  display: block;
+  border: 3px solid $color-accent;   /* borde naranja SIEMPRE */
+  border-radius: 16px;
+  overflow: hidden;                  /* recorta el zoom dentro del borde */
+}
+
+.proyectos-home .galeria__item img {
+  display: block;
+  width: 100%;
+  transform: scale(1);
+  transition: transform .35s ease;
+}
+
+.proyectos-home .galeria__item a:hover img {
+  transform: scale(1.05);            /* zoom suave */
+}
+
+/* leyenda con el punto naranja */
+.proyectos-home .galeria__item figcaption {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: $color-text;
+}
+.proyectos-home .galeria__item figcaption::before {
+  content: "";
+  width: 8px; height: 8px; border-radius: 50%;
+  background: $color-accent;
+}
+
+
+/* Servicios*/
+
 .servicios {
-  padding: clamp(48px, 6vw, 96px) 0;
+  padding: 48px 0;
 
-  h2 {
+  /* título */
+  #servicios-title {
     text-align: center;
-    font-size: clamp(28px, 6vw, 56px);
-    margin-bottom: clamp(28px, 4vw, 48px);
+    margin-bottom: 32px;
   }
 
-  &__grid {
+  /* grilla de 3 columnas fijas */
+  .servicios__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(16px, 3vw, 36px);
+    gap: 28px;
+  }
+
+  /* tarjeta */
+  .serv-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid $color-border;
+    border-radius: 20px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: $shadow-default;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba($color-accent, .7);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    /* icono: volverlo blanco */
+    img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      margin: 4px auto 14px;
+      filter: brightness(0) invert(1);
+      opacity: .95;
+      display: block;
+    }
+
+    h3 {
+      font-family: $font-title;
+      font-size: 1.6rem;
+      letter-spacing: .5px;
+      margin: 10px 0 8px;
+      color: $color-text;
+    }
+
+    p {
+      color: $color-muted;
+      margin: 0 0 18px;
+    }
+
   }
 }
+
 
 /* Asesoramiento */
 .asesoramiento-main { background: $color-bg; }
@@ -81,3 +171,91 @@
     }
   }
 }
+
+/* ===== Masonry en Proyectos ===== */
+.proyectos {
+  padding-top: 40px;
+
+  #proyectos-title { margin: 0 0 28px; }
+
+  /* Masonry: 3 columnas separadas y SIN filas */
+  .galeria__grid {
+    column-count: 3;        /* cantidad de columnas */
+    column-gap: 22px;       /* separación ENTRE columnas */
+  }
+
+  /* Cada item cae en la columna como un bloque; sin “breaks” ni huecos */
+  .galeria__item {
+    display: inline-block;  /* necesario para columnas */
+    width: 100%;
+    break-inside: avoid;    /* evita cortes entre columnas */
+    margin: 0;              /* sin separación vertical entre items */
+  }
+
+  .galeria__frame {
+    position: relative;
+    border: 3px solid $color-accent;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    background: $color-bg;
+  }
+
+  .galeria__media {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform .35s ease;
+  }
+  .galeria__frame:hover .galeria__media { transform: scale(1.05); }
+
+  /* video con proporción cómoda (opcional) */
+  video.galeria__media { height: auto; aspect-ratio: 16 / 9; }
+
+  /* leyenda pegada al frame para que no queden “bandas” */
+  .galeria__caption {
+    display: flex; align-items: center; gap: 8px;
+    margin: 6px 0 12px;  /* pegado al frame; sin huecos grandes */
+    color: $color-muted; line-height: 1.35; font-weight: 500;
+
+    &::before {
+      content: ""; width: 8px; height: 8px; border-radius: 999px;
+      background: $color-accent; flex: 0 0 8px;
+    }
+  }
+}
+
+.formulario .input,
+.formulario input,
+.formulario select,
+.formulario textarea {
+  border: 1.5px solid $color-border;
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: $color-panel;
+  color: $color-text;
+  transition: border-color .2s ease, box-shadow .2s ease;
+
+  &:focus {
+    border-color: $color-accent;
+    box-shadow: 0 0 0 3px rgba(255,122,0,.18);
+    outline: none;
+  }
+
+  &.error {
+    border-color: #ff5b5b;
+    box-shadow: 0 0 0 3px rgba(255,91,91,.18);
+  }
+}
+
+.error-message {
+  display: block;
+  margin-top: 6px;
+  font-size: .95rem;
+  color: #ff5b5b;
+  font-weight: 600;
+}
+
+

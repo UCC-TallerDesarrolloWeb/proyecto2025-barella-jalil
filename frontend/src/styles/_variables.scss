@@ -1,17 +1,13 @@
 // Colores Procraft
-$color-bg:       #0c1626; // fondo header / azul oscuro
+$color-bg:       #0c1626; 
 $color-panel:    #0f2642;
-$color-text:     #ffffff; // texto principal
+$color-text:     #ffffff; 
 $color-muted:    #e6eef8;
-$color-accent:   #ff6600; // naranja
+$color-accent:   #ff6600; 
 $color-border:   rgba(255,255,255,.15);
-
-// Alias útil
 $color-bg-dark:  $color-bg;
 
-// Tipos
 $font-base:  'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 $font-title: 'Bebas Neue', $font-base;
 
-// Sombras
 $shadow-default: 0 6px 24px rgba(0,0,0,.25);
