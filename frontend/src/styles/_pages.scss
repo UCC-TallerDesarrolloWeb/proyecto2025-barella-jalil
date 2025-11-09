@@ -1,0 +1,83 @@
+@import "variables";
+
+/* HOME */
+#home-hero {
+  scroll-margin-top: 80px;
+
+  .hero__wrap { display: grid; gap: 24px; align-items: center; }
+
+  .hero__texto p {
+    color: $color-muted;
+    margin: .2rem 0 1rem;
+  }
+
+  .hero__imagen img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 16px 0;
+  }
+}
+
+/* Servicios */
+.servicios {
+  padding: clamp(48px, 6vw, 96px) 0;
+
+  h2 {
+    text-align: center;
+    font-size: clamp(28px, 6vw, 56px);
+    margin-bottom: clamp(28px, 4vw, 48px);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 3vw, 36px);
+  }
+}
+
+/* Asesoramiento */
+.asesoramiento-main { background: $color-bg; }
+
+.hero-asesoramiento {
+  background: $color-bg;
+  text-align: center;
+  padding: 48px 0 24px;
+
+  h1 {
+    color: $color-text;
+    text-transform: uppercase;
+  }
+  p { color: $color-muted; }
+}
+
+.formulario {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: $shadow-default;
+  color: $color-text;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label { font-weight: 600; color: $color-text; }
+
+    input, select, textarea {
+      background: $color-panel;
+      color: $color-text;
+      border: 1.5px solid $color-border;
+      border-radius: 10px;
+      padding: 12px 14px;
+
+      &:focus {
+        border-color: $color-accent;
+        box-shadow: 0 0 0 3px rgba(255,122,0,.18);
+      }
+    }
+  }
+}

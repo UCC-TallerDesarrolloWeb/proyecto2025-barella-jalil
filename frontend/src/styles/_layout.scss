@@ -1,0 +1,105 @@
+@import "variables";
+@import "variables";
+
+/* HEADER */
+.header {
+  background: $color-bg;
+  color: $color-text;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    gap: 2rem;
+  }
+
+  /* Grupo izq: logo + título */
+  .header__left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .logo img {
+    display: block;
+    max-height: 100px; // ajustado
+    width: auto;
+  }
+
+  .site-title {
+    margin: 0;
+    a {
+      color: $color-text;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 2rem;
+      white-space: nowrap;
+    }
+  }
+
+  /* Menú */
+  .menu__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+
+    a {
+      color: $color-text;
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1;
+      padding: .4rem 0; // área clic
+      transition: color .25s ease;
+
+      &:hover,
+      &.active {
+        color: $color-accent;
+      }
+    }
+  }
+
+  .linea-naranja {
+    height: 4px;
+    background: $color-accent;
+  }
+}
+
+.footer {
+  background: $color-bg;
+  color: $color-text;
+  margin-top: 24px;
+  border-top: 1px solid rgba(255,255,255,.12);
+
+  .linea-naranja { height: 4px; background: $color-accent; }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    gap: 12px;
+  }
+
+  .social {
+    display: flex;
+    gap: 10px;
+    margin: 0; padding: 0; list-style: none;
+
+    a {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: 999px;
+      border: 1px solid $color-border; color: $color-text;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+
+      &:hover, &:focus-visible {
+        background: $color-accent; color: $color-bg; border-color: transparent; outline: none;
+      }
+    }
+
+    .social__icon { width: 20px; height: 20px; }
+  }
+}
