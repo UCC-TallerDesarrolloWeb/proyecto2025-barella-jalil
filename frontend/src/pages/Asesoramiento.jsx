@@ -7,11 +7,17 @@ const RE_LETRAS_NUM = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9\s-]+$/;
 const RE_EMAIL = /^\S+@\S+\.\S+$/;
 const RE_PATENTE = /^(?:[A-Z]{3}\d{3}|[A-Z]{2}\d{3}[A-Z]{2})$/; // ABC123 o AA123BB
 
+
+/**
+ * Estado inicial del formulario de asesoramiento.
+ * @type {Object}
+ */
+
 const initial = {
   nombre: "",
   apellido: "",
   email: "",
-  telefono: "",   // 10 dígitos exactos
+  telefono: "",
   marca: "",
   modelo: "",
   patente: "",
@@ -20,13 +26,22 @@ const initial = {
   importacion: "",
 };
 
+/**
+ * Página de "Solicitar Asesoramiento".
+ * Implementa:
+ * - Formulario controlado con useState
+ * - Validación en vivo y al enviar
+ * - Persistencia parcial en localStorage (prefill)
+ * - Envío al mock API (json-server)
+ * @returns {JSX.Element}
+ */
+
 export default function Asesoramiento() {
   const [form, setForm] = useState(initial);
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [status, setStatus] = useState("");
 
-  /* Prefill (email/teléfono) */
   useEffect(() => {
     const saved = localStorage.getItem("asesoramiento_prefill");
     if (saved) {
@@ -34,7 +49,6 @@ export default function Asesoramiento() {
     }
   }, []);
 
-  /* --- Validación por campo --- */
   const validateField = (name, value, all = {}) => {
     const v = (value ?? "").toString().trim();
     switch (name) {
@@ -90,7 +104,12 @@ export default function Asesoramiento() {
     }
   };
 
-  /* --- Validación global (submit) --- */
+/**
+ * Valida todo el formulario y devuelve un objeto de errores por campo.
+ * Se usa tanto onBlur/onChange como en el submit.
+ * @param {Object} d - Datos actuales del formulario.
+ * @returns {Record<string,string>} Mapa campo->mensaje de error.
+ */
   const validateAll = (data) => {
     const e = {};
     for (const k of Object.keys(initial)) {

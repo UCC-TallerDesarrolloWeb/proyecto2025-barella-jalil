@@ -1,5 +1,5 @@
-@import "variables";
-@import "base";
-@import "layout";
-@import "components";
-@import "pages";
+@use "@/styles/variables" as *;
+@use "@/styles/base";
+@use "@/styles/layout";
+@use "@/styles/components";
+@use "@/styles/pages";

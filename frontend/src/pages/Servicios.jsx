@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 import icComentario  from "@/assets/iconos/comentario.png";
 import icCamion      from "@/assets/iconos/camion.png";
 import icHerramienta from "@/assets/iconos/herramienta.png";
+
+/**
+ * Página “Nuestros Servicios”.
+ * Renderiza 3 tarjetas con CTA hacia las secciones de detalle.
+ * @returns {JSX.Element}
+ */
 function Servicios() {
   return (
     <main className="servicios" aria-labelledby="servicios-title">
@@ -30,9 +36,8 @@ function Servicios() {
               Traemos marcas y modelos específicos bajo pedido, con gestión
               completa de logística.
             </p>
-            <Link className="btn-asesoramiento" to="/servicios/importacion">
-              Ver más
-            </Link>
+        <Link className="btn-asesoramiento" to="/servicios/importacion">Ver más</Link>
+    
           </article>
 
           <article className="serv-card">
@@ -42,9 +47,7 @@ function Servicios() {
               Montaje prolijo y seguro, con garantía y estándares de taller para
               4x4 y autos deportivos.
             </p>
-            <Link className="btn-asesoramiento" to="/servicios/instalacion">
-              Ver más
-            </Link>
+           <Link className="btn-asesoramiento" to="/servicios/instalacion">Ver más</Link>
           </article>
         </div>
       </section>

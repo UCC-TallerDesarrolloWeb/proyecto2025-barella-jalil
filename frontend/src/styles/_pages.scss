@@ -1,4 +1,4 @@
-@import "variables";
+@use "@/styles/variables" as *;
 
 /* HOME */
 #home-hero {
@@ -23,7 +23,6 @@
     height: 4px;
     background: $color-accent;
   }
-/* Galería de Home: figura > a > img + figcaption */
 .proyectos-home .grid--galeria {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -32,9 +31,9 @@
 
 .proyectos-home .galeria__item a {
   display: block;
-  border: 3px solid $color-accent;   /* borde naranja SIEMPRE */
+  border: 3px solid $color-accent;  
   border-radius: 16px;
-  overflow: hidden;                  /* recorta el zoom dentro del borde */
+  overflow: hidden;                
 }
 
 .proyectos-home .galeria__item img {
@@ -45,10 +44,10 @@
 }
 
 .proyectos-home .galeria__item a:hover img {
-  transform: scale(1.05);            /* zoom suave */
+  transform: scale(1.05);          
 }
 
-/* leyenda con el punto naranja */
+
 .proyectos-home .galeria__item figcaption {
   margin-top: 8px;
   display: inline-flex;
@@ -70,20 +69,17 @@
 .servicios {
   padding: 48px 0;
 
-  /* título */
   #servicios-title {
     text-align: center;
     margin-bottom: 32px;
   }
 
-  /* grilla de 3 columnas fijas */
   .servicios__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
   }
 
-  /* tarjeta */
   .serv-card {
     background: rgba(255,255,255,0.04);
     border: 1px solid $color-border;
@@ -172,24 +168,22 @@
   }
 }
 
-/* ===== Masonry en Proyectos ===== */
+/* Masonry en Proyectos  */
 .proyectos {
   padding-top: 40px;
 
   #proyectos-title { margin: 0 0 28px; }
 
-  /* Masonry: 3 columnas separadas y SIN filas */
   .galeria__grid {
-    column-count: 3;        /* cantidad de columnas */
-    column-gap: 22px;       /* separación ENTRE columnas */
+    column-count: 3;        
+    column-gap: 22px;      
   }
 
-  /* Cada item cae en la columna como un bloque; sin “breaks” ni huecos */
   .galeria__item {
-    display: inline-block;  /* necesario para columnas */
+    display: inline-block;  
     width: 100%;
-    break-inside: avoid;    /* evita cortes entre columnas */
-    margin: 0;              /* sin separación vertical entre items */
+    break-inside: avoid;    
+    margin: 0;            
   }
 
   .galeria__frame {
@@ -211,13 +205,11 @@
   }
   .galeria__frame:hover .galeria__media { transform: scale(1.05); }
 
-  /* video con proporción cómoda (opcional) */
   video.galeria__media { height: auto; aspect-ratio: 16 / 9; }
 
-  /* leyenda pegada al frame para que no queden “bandas” */
   .galeria__caption {
     display: flex; align-items: center; gap: 8px;
-    margin: 6px 0 12px;  /* pegado al frame; sin huecos grandes */
+    margin: 6px 0 12px;  
     color: $color-muted; line-height: 1.35; font-weight: 500;
 
     &::before {
@@ -259,3 +251,45 @@
 }
 
 
+.servicio-page {
+  position: relative;
+  padding: 48px 0 24px;
+
+  &__icon {
+    position: absolute;
+    left: 24px;
+    top: 16px;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); 
+    opacity: .95;
+    pointer-events: none;
+  }
+
+  &__content {
+    text-align: center;
+
+    h1 {
+      font-family: $font-title;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      font-size: clamp(32px, 5vw, 44px);
+      margin: 0 0 16px;
+      color: $color-text;
+    }
+
+    p {
+      max-width: 860px;
+      margin: 0 auto 18px;
+      line-height: 1.65;
+      color: $color-text;
+      opacity: .95;
+    }
+
+    .btn-asesoramiento {
+      display: inline-block; 
+      margin-top: 4px;
+    }
+  }
+}

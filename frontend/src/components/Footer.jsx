@@ -1,3 +1,8 @@
+/**
+ * Pie del sitio con línea naranja y redes.
+ * @returns {JSX.Element}
+ */
+
 function Footer() {
   return (
     <footer className="footer" id="site-footer" role="contentinfo">

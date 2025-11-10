@@ -1,4 +1,25 @@
-@import "variables";
+@use "@/styles/variables" as *;
+/* Base */
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+body {
+  font-family: $font-base;
+  font-weight: 400;
+  background: $color-bg;
+  color: $color-text;
+}
+
+h1, h2, h3, .menu a, .btn, .social__label {
+  font-family: $font-title;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
 
 /* Base */
 img { max-width: 100%; height: auto; display: block; }

@@ -1,3 +1,9 @@
+/**
+ * Barra de navegación principal del sitio.
+ * Marca el link activo y muestra CTA a Asesoramiento.
+ * @returns {JSX.Element}
+ */
+
 import { NavLink } from "react-router-dom";
 
 function Navbar() {

@@ -11,3 +11,7 @@ export default function RootLayout() {
     </>
   );
 }
+/**
+ * Layout raíz con header, contenido (Outlet) y footer.
+ * @returns {JSX.Element}
+ */

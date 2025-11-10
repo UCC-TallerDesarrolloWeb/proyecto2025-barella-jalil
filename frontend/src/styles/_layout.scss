@@ -1,5 +1,4 @@
-@import "variables";
-@import "variables";
+@use "@/styles/variables" as *;
 
 /* HEADER */
 .header {
@@ -14,7 +13,6 @@
     gap: 2rem;
   }
 
-  /* Grupo izq: logo + título */
   .header__left {
     display: flex;
     align-items: center;
@@ -23,7 +21,7 @@
 
   .logo img {
     display: block;
-    max-height: 100px; // ajustado
+    max-height: 100px; 
     width: auto;
   }
 
@@ -38,7 +36,7 @@
     }
   }
 
-  /* Menú */
+
   .menu__list {
     list-style: none;
     display: flex;
@@ -52,7 +50,7 @@
       font-weight: 600;
       text-decoration: none;
       line-height: 1;
-      padding: .4rem 0; // área clic
+      padding: .4rem 0; 
       transition: color .25s ease;
 
       &:hover,
