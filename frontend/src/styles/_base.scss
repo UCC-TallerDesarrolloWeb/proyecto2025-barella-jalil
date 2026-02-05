@@ -1,5 +1,4 @@
-@use "@/styles/variables" as *;
-/* Base */
+@use "./variables" as *;/* Base */
 img { max-width: 100%; height: auto; display: block; }
 
 .container {

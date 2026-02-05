@@ -45,7 +45,10 @@ export default function Asesoramiento() {
   useEffect(() => {
     const saved = localStorage.getItem("asesoramiento_prefill");
     if (saved) {
-      try { setForm((f) => ({ ...f, ...JSON.parse(saved) })); } catch {}
+      try { setForm((f) => ({ ...f, ...JSON.parse(saved) })); } catch (e) {
+          console.error("Error al leer datos guardados", e);
+      }
+
     }
   }, []);
 
