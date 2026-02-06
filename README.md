@@ -3,11 +3,9 @@
 **Autores:** Máximo Barella · Carola Jalil
 **Materia:** Taller de Desarrollo Web — UCC (2025)
 
-**Sitio Web (1ª entrega):**
+**Sitio Web 
 [https://ucc-tallerdesarrolloweb.github.io/proyecto2025-barella-jalil/](https://ucc-tallerdesarrolloweb.github.io/proyecto2025-barella-jalil/)
 
-**SPA (2ª entrega con React + Vite):**
-🔧 *Pendiente de corrección del deploy en GitHub Pages.*
 
 ---
 
