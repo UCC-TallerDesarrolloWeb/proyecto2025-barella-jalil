@@ -41,7 +41,7 @@ export default function QuienesSomos() {
               <li><strong>Servicio</strong>: vamos hasta donde estés para que no pierdas tiempo.</li>
             </ul>
 
-            <div style={{ marginTop: 16 }}>
+              <div className="mt-16">
               <Link className="btn-asesoramiento" to="/asesoramiento">
                 Solicitar asesoramiento
               </Link>
@@ -50,11 +50,10 @@ export default function QuienesSomos() {
 
           {/* Columna imagen (reutilizás una que ya usaste en Home) */}
           <figure>
-            <img
+            <img className="img-rounded"
               src="/imagenes/quienes/quienes-somos.png"
               alt="Equipo Procraft Parts en una instalación"
               loading="lazy"
-              style={{ width: "100%", borderRadius: "12px" }}
             />
           </figure>
         </div>

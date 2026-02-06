@@ -1,239 +1,184 @@
-⚙️ PROCRAFT PARTS — Accesorios y Proyectos a tu Medida
+# ⚙️ PROCRAFT PARTS — Accesorios y Proyectos a tu Medida
 
-Autores: Máximo Barella · Carola Jalil
-Materia: Taller de Desarrollo Web — UCC (2025)
-Sitio Web (1ª entrega): https://ucc-tallerdesarrolloweb.github.io/proyecto2025-barella-jalil/
+**Autores:** Máximo Barella · Carola Jalil
+**Materia:** Taller de Desarrollo Web — UCC (2025)
 
-SPA (2ª entrega con React + Vite): TODO: (si publican el frontend como SPA, colocar aquí el enlace)
+**Sitio Web (1ª entrega):**
+[https://ucc-tallerdesarrolloweb.github.io/proyecto2025-barella-jalil/](https://ucc-tallerdesarrolloweb.github.io/proyecto2025-barella-jalil/)
 
-📋 Índice
+**SPA (2ª entrega con React + Vite):**
+🔧 *Pendiente de corrección del deploy en GitHub Pages.*
 
-Descripción
+---
 
-Contenido del Sitio
+## 📋 Índice
 
-Stack Tecnológico
+* [Descripción](#-descripción)
+* [Contenido del Sitio](#-contenido-del-sitio)
+* [Stack Tecnológico](#-stack-tecnológico)
+* [Estructura del Repositorio](#-estructura-del-repositorio)
+* [Cómo Ejecutar](#-cómo-ejecutar)
+* [Ruteo y Componentes (2ª entrega)](#-ruteo-y-componentes-2ª-entrega)
+* [Validaciones y Accesibilidad](#-validaciones-y-accesibilidad)
+* [Buenas Prácticas y Calidad](#-buenas-prácticas-y-calidad)
+* [Autores](#-autores)
+* [Información Académica](#-información-académica)
 
-Estructura del Repositorio
+---
 
-Cómo Ejecutar
+## 🧾 Descripción
 
-Ruteo y Componentes (2ª entrega)
+**PROCRAFT PARTS** es un sitio orientado a servicios de instalación profesional, asesoramiento técnico e importación de accesorios para autos y pickups.
 
-Validaciones y Accesibilidad
+* **1ª entrega:** sitio multi-página desarrollado con **HTML5, CSS3 y JavaScript (ES6)**.
+* **2ª entrega:** migración progresiva a **React + Vite**, con ruteo, componentes reutilizables y render dinámico.
 
-Buenas Prácticas y Calidad
+**Objetivo general:** aplicar buenas prácticas de frontend para un sitio responsive, accesible y con identidad visual definida (azul + naranja).
 
-Autores
+---
 
-Información Académica
+## 🧱 Contenido del Sitio
 
-🧾 Descripción
+### Páginas principales
 
-PROCRAFT PARTS es un sitio moderno para servicios de instalación profesional, asesoramiento e importación de accesorios para autos y pickups.
+* **Inicio (`index.html`)**: hero, llamada a la acción y accesos rápidos.
+* **Quiénes Somos (`quienes.html`)**: historia, enfoque técnico y propuesta de valor.
+* **Servicios (`servicios.html`)**: tarjetas de Instalación, Asesoramiento e Importación.
+* **Proyectos (`proyectos.html`)**: galería responsive con imágenes y video.
+* **Asesoramiento (`asesoramiento.html`)**: formulario con validación en cliente.
 
-1ª entrega: Sitio multi-página con HTML5, CSS3 y JS (ES6).
+### Detalle de servicios
 
-2ª entrega: Migración progresiva a React + Vite, React Router, Hooks, estado persistente en localStorage y render dinámico desde JSON local.
+* `servicio-instalacion.html`
+* `servicio-asesoramiento.html`
+* `servicio-importacion.html`
 
-Objetivo general: aplicar buenas prácticas de frontend para un sitio responsive, accesible, con identidad visual (azul + naranja) y código limpio.
+> En la **2ª entrega**, estas vistas se reimplementan como rutas de React manteniendo el contenido funcional.
 
-🧱 Contenido del Sitio
+---
 
-Inicio (index.html): hero, llamada a la acción, acceso rápido a secciones.
+## 💻 Stack Tecnológico
 
-Quiénes Somos (quienes.html): historia, propuesta de valor y enfoque técnico.
+| Tecnología         | Uso                                     |
+| ------------------ | --------------------------------------- |
+| HTML5              | Estructura semántica                    |
+| CSS3               | Layout (Flexbox / Grid) y estilos       |
+| JavaScript ES6     | Interactividad y validaciones           |
+| React + Vite       | SPA, HMR, build y preview               |
+| React Router DOM   | Ruteo y layouts anidados                |
+| SASS / SCSS        | Organización y reutilización de estilos |
+| Git & GitHub Pages | Versionado y despliegue                 |
+| Google Fonts       | Montserrat · Bebas Neue                 |
 
-Servicios (servicios.html): tarjetas de Instalación, Asesoramiento e Importación.
+---
 
-Detalle: servicio-instalacion.html, servicio-asesoramiento.html, servicio-importacion.html.
+## 📂 Estructura del Repositorio
 
-Proyectos (proyectos.html): galería responsive (masonry) con imágenes y video.
+## 📁 Estructura del Repositorio
 
-Asesoramiento (asesoramiento.html): formulario con validación en cliente.
-
-En la 2ª entrega estas vistas se reimplementan como rutas de React manteniendo el contenido funcional.
-
-💻 Stack Tecnológico
-Tecnología	Uso
-HTML5 / CSS3	Semántica, layout (Flex/Grid), UI responsive
-JavaScript ES6	Interactividad, validación de formularios
-React 18 + Vite	SPA con HMR, build y preview (2ª entrega)
-React Router DOM v6	Ruteo, Outlet para layouts anidados
-Hooks	useState, useEffect, useContext, useNavigate
-SASS/SCSS	Organización de estilos; @use y @forward
-localStorage	Persistencia (ej. carrito / preferencias)
-Git & GitHub Pages	Versionado y despliegue
-Google Fonts	Montserrat · Bebas Neue
-Assets	Íconos SVG, imágenes responsive, video (mp4/webm)
-📂 Estructura del Repositorio
-
-Mantiene la 1ª entrega y suma el frontend React para la 2ª.
-
+```text
 proyecto2025-barella-jalil/
-├── css/                 # estilos.css (1ª entrega)
-├── imagenes/            # imágenes optimizadas (logos, iconos, proyectos, etc.)
-├── js/
-│   └── scripts.js       # interacciones/validaciones (1ª entrega)
-├── videos/
-│   ├── luz.mp4
-│   └── luz.webm
-├── index.html
-├── quienes.html
-├── servicios.html
-├── servicio-instalacion.html
-├── servicio-asesoramiento.html
-├── servicio-importacion.html
-├── proyectos.html
-├── asesoramiento.html
-├── README.md
-├── .gitignore
-└── frontend/            # 2ª entrega: React + Vite
-    ├── index.html
-    ├── vite.config.js   
+├── css/                      # Estilos CSS (1ª entrega)
+├── imagenes/                 # Imágenes optimizadas (logos, iconos, proyectos)
+├── js/                       # JavaScript (validaciones e interactividad)
+├── videos/                   # Videos mp4 / webm
+├── index.html                # Página principal (1ª entrega)
+├── quienes.html              # Quiénes Somos
+├── servicios.html            # Servicios
+├── servicio-instalacion.html # Detalle Instalación
+├── servicio-asesoramiento.html # Detalle Asesoramiento
+├── servicio-importacion.html # Detalle Importación
+├── proyectos.html            # Proyectos
+├── asesoramiento.html        # Formulario de asesoramiento
+├── README.md                 # Documentación del proyecto
+└── frontend/                 # 2ª entrega – SPA con React + Vite
+    ├── index.html            # Entry point de Vite
     ├── package.json
     ├── package-lock.json
-    ├── App.jsx
-    ├── main.jsx
-    ├── .gitignore
+    ├── vite.config.js
     ├── eslint.config.js
-    ├── index.html
-    ├── README.md
-    ├── public/ imagenes,videos
+    ├── public/
+    │   └── imagenes/         # Assets públicos
     └── src/
         ├── main.jsx
-        ├── app.jsx
-        ├── assets/ #iconos
-        ├── components/  # Boton, Footer, Navbar, RootLayout.
-        ├── pages/       # Home, Servicios, Proyectos, Quienes, Asesoramiento, ServiciosImportacion, ServiciosInstalacion
-        ├── styles/      # _variables.scss, _main.scss, _layout.scss, _components.scss, _base.scss, _pages.scss, 
+        ├── App.jsx
+        ├── assets/
+        │   └── iconos/       # Íconos PNG / SVG
+        ├── components/       # Componentes reutilizables
+        ├── pages/            # Vistas (Home, Servicios, Proyectos, etc.)
+        └── styles/           # SCSS (_variables, _layout, _components, etc.)
 
-🛠️ Cómo Ejecutar
-1) 1ª entrega (estático)
 
-Abrir index.html en el navegador o usar Live Server.
+## 🛠️ Cómo Ejecutar
 
-2) 2ª entrega (React + Vite)
+### 1️⃣ Primera entrega (estático)
+
+* Abrir `index.html` en el navegador
+* O usar Live Server
+
+### 2️⃣ Segunda entrega (React + Vite)
+
+```bash
 cd frontend
 npm install
-npm i -D sass
+npm run dev
+```
 
-# desarrollo
-npm run dev   # abre la URL que muestra Vite
+---
 
-# build de producción
-npm run build
+## 🧭 Ruteo y Componentes (2ª entrega)
 
-# previsualizar build
-npm run preview
+### Rutas principales
 
+* `/` → Home
+* `/quienes` → Quiénes Somos
+* `/servicios` → Servicios
+* `/servicios/instalacion`
+* `/servicios/asesoramiento`
+* `/servicios/importacion`
+* `/proyectos`
+* `/asesoramiento`
 
-vite.config.js (alias recomendado):
+### Hooks utilizados
 
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+* `useState`
+* `useEffect`
+* `useNavigate`
 
-export default defineConfig({
-  plugins: [react()],
-  resolve: { alias: { '@': path.resolve(__dirname, './src') } }
-})
+---
 
+## ✅ Validaciones y Accesibilidad
 
-Deploy SPA: si publican la carpeta frontend en GitHub Pages, recuerden configurar base en Vite si el repo no es user/ org page.
-Opcional: usar gh-pages o GitHub Actions para deploy automático.
+* Validación en tiempo real en formularios
+* Uso de `label` asociado a cada input
+* Mensajes de error accesibles
+* Imágenes con `alt` descriptivo
+* Semántica HTML correcta (`header`, `nav`, `main`, `section`, `footer`)
 
-🧭 Ruteo y Componentes (2ª entrega)
+---
 
-Rutas principales (React Router v6):
+## 🧪 Buenas Prácticas y Calidad
 
-/ → Home (hero + CTA)
+* Sin estilos en línea
+* Sin imports innecesarios
+* SCSS modularizado (`_variables`, `_layout`, `_components`)
+* Código sin warnings críticos
+* Uso de JsDoc en funciones relevantes
 
-/quienes → Quiénes Somos
+---
 
-/servicios → Servicios (lista)
+## 👥 Autores
 
-/servicios/instalacion
+| Nombre         | Rol                                 |
+| -------------- | ----------------------------------- |
+| Máximo Barella | Desarrollo Frontend                 |
+| Carola Jalil   | Diseño visual · Desarrollo Frontend |
 
-/servicios/asesoramiento
+---
 
-/servicios/importacion
+## 🏫 Información Académica
 
-/proyectos → Proyectos (galería)
-
-/asesoramiento → Formulario (validación en tiempo real)
-
-Hooks y estado:
-
-useState + useEffect para formularios y carga de datos.
-
-useContext para carrito o preferencias de tema (persistido en localStorage).
-
-Datos de catálogo desde src/data/catalogo.json con fetch o import estático.
-
-Componentes genéricos reutilizables:
-
-Button, Card, Input (con props para variante/estado/error).
-
-Header + Footer comunes con <Outlet /> en layout.
-
-✅ Validaciones y Accesibilidad
-
-Formulario de Asesoramiento (HTML/React):
-
-Validación en tiempo real con onChange.
-
-Mensajes de error accesibles (usar aria-live="polite" y aria-invalid).
-
-label asociado a cada input (for/id).
-
-maxlength, placeholder, required y sanitización básica en JS.
-
-General:
-
-Imágenes con alt descriptivo.
-
-Contraste suficiente, foco visible, orden de tabulación correcto.
-
-Semántica: header/nav/main/section/article/footer.
-
-🧪 Buenas Prácticas y Calidad
-
-CSS/SCSS
-
-Migrar @import → @use / @forward.
-
-Variables centralizadas: styles/_variables.scss.
-
-Convención BEM y layout con Flex/Grid.
-
-JavaScript/React
-
-Funciones flecha y const/let según corresponda.
-
-Sin funciones muertas ni warnings de consola.
-
-JsDoc en funciones clave:
-
-/**
- * Valida un campo de texto (no vacío y longitud mínima).
- * @param {string} value - texto a validar
- * @param {number} min - longitud mínima
- * @returns {{ok: boolean, error?: string}}
- */
-export const validateText = (value, min = 3) => { /* ... */ }
-
-
-👥 Autores
-Nombre	Rol
-Máximo Barella	Desarrollo Frontend
-Carola Jalil	Diseño visual · Desarrollo Frontend
-🏫 Información Académica
-
-Universidad: Universidad Católica de Córdoba (UCC)
-
-Materia: Taller de Desarrollo Web
-
-Año: 2025
-
-Tipo: Proyecto (Parcial 1 y 2)
+* **Universidad:** Universidad Católica de Córdoba
+* **Materia:** Taller de Desarrollo Web
+* **Año:** 2025
+* **Tipo:** Proyecto (1ª y 2ª entrega)

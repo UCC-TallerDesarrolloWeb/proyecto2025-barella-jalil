@@ -58,3 +58,13 @@ h1, h2, h3, .menu a, .btn, .social__label {
 .grid--galeria { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .grid--dos { display: flex; flex-wrap: wrap; gap: 16px; }
 .grid--dos > * { flex: 1 1 280px; }
+
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.img-rounded {
+  width: 100%;
+  border-radius: 12px;
+}
