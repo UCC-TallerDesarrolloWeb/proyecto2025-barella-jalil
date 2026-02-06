@@ -14,7 +14,7 @@ function Navbar() {
           <div className="logo">
             <NavLink to="/" aria-label="Ir al inicio">
               <img
-                src="/imagenes/logos/logotipo 3.png"
+                src="imagenes/logos/logotipo 3.png"
                 alt="Logotipo de PROCRAFT PARTS"
               />
             </NavLink>

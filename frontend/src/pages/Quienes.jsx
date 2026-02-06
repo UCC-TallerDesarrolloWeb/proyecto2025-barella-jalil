@@ -9,14 +9,12 @@ import { Link } from "react-router-dom";
 export default function QuienesSomos() {
   return (
     <main id="quienes-somos" className="about">
-      {/* separador visual, ya tenés el estilo de .linea-naranja */}
       <div className="linea-naranja" aria-hidden="true" />
 
       <section className="container">
         <h1 className="about__title">Quiénes Somos</h1>
 
         <div className="grid grid--dos">
-          {/* Columna texto */}
           <div>
             <p className="about__text">
               Somos Lucas y Juan, ingenieros graduados en la UTN (uno mecánico y el otro informático).
@@ -48,10 +46,9 @@ export default function QuienesSomos() {
             </div>
           </div>
 
-          {/* Columna imagen (reutilizás una que ya usaste en Home) */}
           <figure>
             <img className="img-rounded"
-              src="/imagenes/quienes/quienes-somos.png"
+              src="imagenes/quienes/quienes-somos.png"
               alt="Equipo Procraft Parts en una instalación"
               loading="lazy"
             />

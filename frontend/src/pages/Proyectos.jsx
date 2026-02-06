@@ -30,7 +30,7 @@ export default function Proyectos() {
             <div className="galeria__frame">
               <img
                 className="galeria__media"
-                src="/imagenes/ramb/frente.png"
+                src="imagenes/ramb/frente.png"
                 alt="Barras LED y faros auxiliares"
                 loading="lazy"
               />
@@ -45,7 +45,7 @@ export default function Proyectos() {
             <div className="galeria__frame">
               <img
                 className="galeria__media"
-                src="/imagenes/ram/rack.png"
+                src="imagenes/ram/rack.png"
                 alt="Racks y portaequipajes"
                 loading="lazy"
               />
@@ -60,7 +60,7 @@ export default function Proyectos() {
             <div className="galeria__frame">
               <img
                 className="galeria__media"
-                src="/imagenes/ram/fenderlargo.jpg"
+                src="imagenes/ram/fenderlargo.jpg"
                 alt="Protectores y fenders"
                 loading="lazy"
               />
@@ -75,7 +75,7 @@ export default function Proyectos() {
             <div className="galeria__frame">
               <img
                 className="galeria__media"
-                src="/imagenes/abarth/abarth 1.jpg"
+                src="imagenes/abarth/abarth 1.jpg"
                 alt="Centro de llanta y óptica en fibra"
                 loading="lazy"
               />
@@ -91,7 +91,7 @@ export default function Proyectos() {
             <div className="galeria__frame">
               <img
                 className="galeria__media"
-                src="/imagenes/bmw/stereo.jpg"
+                src="imagenes/bmw/stereo.jpg"
                 alt="Instalación de stereo"
                 loading="lazy"
               />
@@ -106,7 +106,7 @@ export default function Proyectos() {
             <div className="galeria__frame">
               <img
                 className="galeria__media"
-                src="/imagenes/ram/RAMLUCES.png"
+                src="imagenes/ram/RAMLUCES.png"
                 alt="Parrilla personalizada con luces"
                 loading="lazy"
               />
@@ -122,7 +122,7 @@ export default function Proyectos() {
             <div className="galeria__frame">
               <img
                 className="galeria__media"
-                src="/imagenes/ram/esc-m.jpg"
+                src="imagenes/ram/esc-m.jpg"
                 alt="Escape Akrapovic"
                 loading="lazy"
               />
@@ -137,7 +137,7 @@ export default function Proyectos() {
             <div className="galeria__frame">
               <img
                 className="galeria__media"
-                src="/imagenes/ram/letras y opticas-g.jpg"
+                src="imagenes/ram/letras y opticas-g.jpg"
                 alt="Letras y ópticas"
                 loading="lazy"
               />

@@ -15,7 +15,7 @@ function Home() {
              <Boton texto="Ver servicios" ruta="/servicios" />
           </div>
           <div className="hero__imagen">
-          <img src="/imagenes/inicio/carrusel_1.jpg" alt="Portada del vehículo" />
+          <img src="imagenes/inicio/carrusel_1.jpg" alt="Portada del vehículo" />
           </div>
         </div>
       <div className="linea-naranja" aria-hidden="true"></div>
@@ -31,14 +31,14 @@ function Home() {
           <div className="grid grid--galeria">
             <figure className="galeria__item">
               <a href="/proyectos" aria-label="Ver Proyecto 1 en la página de Proyectos">
-               <img src="/imagenes/ram/letras y opticas-g.jpg" alt="Proyecto Dodge Ram" />
+               <img src="imagenes/ram/letras y opticas-g.jpg" alt="Proyecto Dodge Ram" />
               </a>
               <figcaption>Dodge Ram 1500</figcaption>
             </figure>
 
             <figure className="galeria__item">
               <a href="/proyectos" aria-label="Ver Proyecto 2 en la página de Proyectos">
-              <img src="/imagenes/abarth/abarth 1.jpg" alt="Proyecto Abarth" />
+              <img src="imagenes/abarth/abarth 1.jpg" alt="Proyecto Abarth" />
               </a>
               <figcaption>Fiat 595 Abarth</figcaption>
             </figure>
