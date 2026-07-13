@@ -6,12 +6,13 @@
 
 import { useNavigate } from "react-router-dom";
 
-const Boton = ({ texto, ruta, clase = "btn-asesoramiento" }) => {
+const Boton = (props) => {
   const navigate = useNavigate();
+  const clase = props.clase ? props.clase : "btn-asesoramiento";
 
   return (
-    <button className={clase} onClick={() => navigate(ruta)}>
-      {texto}
+    <button className={clase} onClick={() => navigate(props.ruta)}>
+      {props.texto}
     </button>
   );
 };

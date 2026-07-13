@@ -7,6 +7,18 @@ const RE_LETRAS_NUM = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9\s-]+$/;
 const RE_EMAIL = /^\S+@\S+\.\S+$/;
 const RE_PATENTE = /^(?:[A-Z]{3}\d{3}|[A-Z]{2}\d{3}[A-Z]{2})$/; // ABC123 o AA123BB
 
+/**
+ * Copia todas las propiedades de un objeto en uno nuevo (sin usar spread).
+ * @param {Object} obj - objeto a copiar
+ * @returns {Object} copia del objeto
+ */
+const copiarObjeto = (obj) => {
+  const copia = {};
+  for (const clave in obj) {
+    copia[clave] = obj[clave];
+  }
+  return copia;
+};
 
 /**
  * Estado inicial del formulario de asesoramiento.
@@ -25,6 +37,14 @@ const initial = {
   mejoras: [],
   importacion: "",
 };
+
+/* Opciones de mejoras deseadas */
+const OPCIONES_MEJORAS = [
+  ["mecanicas", "Mecánicas"],
+  ["esteticas", "Estéticas"],
+  ["audio", "De audio"],
+  ["iluminacion", "De iluminación"],
+];
 
 /**
  * Página de "Solicitar Asesoramiento".
@@ -45,7 +65,16 @@ const Asesoramiento = () => {
   useEffect(() => {
     const saved = localStorage.getItem("asesoramiento_prefill");
     if (saved) {
-      try { setForm((f) => ({ ...f, ...JSON.parse(saved) })); } catch (e) {
+      try {
+        const datosGuardados = JSON.parse(saved);
+        setForm((f) => {
+          const nuevo = copiarObjeto(f);
+          for (const clave in datosGuardados) {
+            nuevo[clave] = datosGuardados[clave];
+          }
+          return nuevo;
+        });
+      } catch (e) {
           console.error("Error al leer datos guardados", e);
       }
 
@@ -53,7 +82,7 @@ const Asesoramiento = () => {
   }, []);
 
   const validateField = (name, value, all = {}) => {
-    const v = (value ?? "").toString().trim();
+    const v = (value || "").toString().trim();
     switch (name) {
       case "nombre":
       case "apellido":
@@ -124,14 +153,23 @@ const Asesoramiento = () => {
 
   /* --- Handlers de cambio --- */
   const onChange = (e) => {
-    const { name, value } = e.target;
+    const name = e.target.name;
+    const value = e.target.value;
 
     // Normalizaciones por campo
     if (name === "telefono") {
       const onlyDigits = value.replace(/\D/g, "").slice(0, 10);
-      setForm((f) => ({ ...f, telefono: onlyDigits }));
+      setForm((f) => {
+        const nuevo = copiarObjeto(f);
+        nuevo.telefono = onlyDigits;
+        return nuevo;
+      });
       if (touched.telefono) {
-        setErrors((er) => ({ ...er, telefono: validateField("telefono", onlyDigits) }));
+        setErrors((er) => {
+          const nuevo = copiarObjeto(er);
+          nuevo.telefono = validateField("telefono", onlyDigits);
+          return nuevo;
+        });
       }
       return;
     }
@@ -139,36 +177,90 @@ const Asesoramiento = () => {
     if (name === "patente") {
       // Permití escribir libre pero validamos en vivo
       const val = value.toUpperCase();
-      setForm((f) => ({ ...f, patente: val }));
+      setForm((f) => {
+        const nuevo = copiarObjeto(f);
+        nuevo.patente = val;
+        return nuevo;
+      });
       if (touched.patente) {
-        setErrors((er) => ({ ...er, patente: validateField("patente", val) }));
+        setErrors((er) => {
+          const nuevo = copiarObjeto(er);
+          nuevo.patente = validateField("patente", val);
+          return nuevo;
+        });
       }
       return;
     }
 
-    setForm((f) => ({ ...f, [name]: value }));
+    setForm((f) => {
+      const nuevo = copiarObjeto(f);
+      nuevo[name] = value;
+      return nuevo;
+    });
     if (touched[name]) {
-      setErrors((er) => ({ ...er, [name]: validateField(name, value, { ...form, [name]: value }) }));
+      setErrors((er) => {
+        const nuevo = copiarObjeto(er);
+        const formActualizado = copiarObjeto(form);
+        formActualizado[name] = value;
+        nuevo[name] = validateField(name, value, formActualizado);
+        return nuevo;
+      });
     }
   };
 
   const onChangeMejoras = (e) => {
-    const { checked, value } = e.target;
+    const checked = e.target.checked;
+    const value = e.target.value;
+
     setForm((f) => {
-      const set = new Set(f.mejoras);
-      if (checked) set.add(value); else set.delete(value);
-      const next = { ...f, mejoras: Array.from(set) };
-      if (touched.mejoras) {
-        setErrors((er) => ({ ...er, mejoras: validateField("mejoras", next.mejoras, next) }));
+      const mejorasNuevas = f.mejoras.slice();
+      if (checked) {
+        mejorasNuevas.push(value);
+      } else {
+        const index = mejorasNuevas.indexOf(value);
+        if (index !== -1) mejorasNuevas.splice(index, 1);
       }
+
+      const next = copiarObjeto(f);
+      next.mejoras = mejorasNuevas;
+
+      if (touched.mejoras) {
+        setErrors((er) => {
+          const nuevoEr = copiarObjeto(er);
+          nuevoEr.mejoras = validateField("mejoras", mejorasNuevas, next);
+          return nuevoEr;
+        });
+      }
+
       return next;
     });
   };
 
   const onBlur = (e) => {
-    const { name } = e.target;
-    setTouched((t) => ({ ...t, [name]: true }));
-    setErrors((er) => ({ ...er, [name]: validateField(name, form[name], form) }));
+    const name = e.target.name;
+    setTouched((t) => {
+      const nuevo = copiarObjeto(t);
+      nuevo[name] = true;
+      return nuevo;
+    });
+    setErrors((er) => {
+      const nuevo = copiarObjeto(er);
+      nuevo[name] = validateField(name, form[name], form);
+      return nuevo;
+    });
+  };
+
+  const onBlurMejoras = () => {
+    setTouched((t) => {
+      const nuevo = copiarObjeto(t);
+      nuevo.mejoras = true;
+      return nuevo;
+    });
+    setErrors((er) => {
+      const nuevo = copiarObjeto(er);
+      nuevo.mejoras = validateField("mejoras", form.mejoras, form);
+      return nuevo;
+    });
   };
 
   const onSubmit = async (e) => {
@@ -324,26 +416,15 @@ const Asesoramiento = () => {
               <div className="form-group">
                 <label>Me gustaría mejoras en:</label>
                 <div className="checkbox-group">
-                  {[
-                    ["mecanicas", "Mecánicas"],
-                    ["esteticas", "Estéticas"],
-                    ["audio", "De audio"],
-                    ["iluminacion", "De iluminación"],
-                  ].map(([val, label]) => (
-                    <label key={val} className="checkbox-label">
+                  {OPCIONES_MEJORAS.map((opcion) => (
+                    <label key={opcion[0]} className="checkbox-label">
                       <input
-                        type="checkbox" name="mejoras" value={val}
-                        checked={form.mejoras.includes(val)}
+                        type="checkbox" name="mejoras" value={opcion[0]}
+                        checked={form.mejoras.includes(opcion[0])}
                         onChange={onChangeMejoras}
-                        onBlur={() => {
-                          setTouched((t) => ({ ...t, mejoras: true }));
-                          setErrors((er) => ({
-                            ...er,
-                            mejoras: validateField("mejoras", form.mejoras, form),
-                          }));
-                        }}
+                        onBlur={onBlurMejoras}
                       />{" "}
-                      {label}
+                      {opcion[1]}
                     </label>
                   ))}
                 </div>

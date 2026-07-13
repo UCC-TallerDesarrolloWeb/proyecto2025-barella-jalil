@@ -14,6 +14,21 @@
         "esteticas"
       ],
       "importacion": "Me gustaria que tenga asientos de cuero"
+    },
+    {
+      "id": "1a16",
+      "nombre": "carola",
+      "apellido": "jalil",
+      "email": "carolajalil8@gmail.com",
+      "telefono": "3512531666",
+      "marca": "fiat",
+      "modelo": "cronos",
+      "patente": "ABC123",
+      "uso": "urbano",
+      "mejoras": [
+        "audio"
+      ],
+      "importacion": "mejorar el parlante"
     }
   ]
 }
