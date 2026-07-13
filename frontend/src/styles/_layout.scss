@@ -56,9 +56,10 @@
     a {
       color: $color-text;
       font-weight: 600;
+      font-size: 1.1rem;
       text-decoration: none;
       line-height: 1;
-      padding: .4rem 0; 
+      padding: .4rem 0;
       transition: color .25s ease;
 
       &:hover,
