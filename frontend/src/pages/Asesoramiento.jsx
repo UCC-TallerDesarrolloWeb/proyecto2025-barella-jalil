@@ -46,6 +46,21 @@ const OPCIONES_MEJORAS = [
   ["iluminacion", "De iluminación"],
 ];
 
+/* Campos de texto de "Información Personal" */
+const CAMPOS_PERSONALES = [
+  { name: "nombre", label: "Nombre *", autoComplete: "given-name" },
+  { name: "apellido", label: "Apellido *", autoComplete: "family-name" },
+  { name: "email", label: "Email *", type: "email", autoComplete: "email" },
+  { name: "telefono", label: "Teléfono (10 dígitos) *", maxLength: 10, placeholder: "3511234567" },
+];
+
+/* Campos de texto de "Información del Vehículo" */
+const CAMPOS_VEHICULO = [
+  { name: "marca", label: "Marca *" },
+  { name: "modelo", label: "Modelo *" },
+  { name: "patente", label: "Patente *", placeholder: "ABC123 o AA123BB" },
+];
+
 /**
  * Página de "Solicitar Asesoramiento".
  * Implementa:
@@ -328,102 +343,52 @@ const Asesoramiento = () => {
             <div className="form-seccion">
               <h2>Información Personal</h2>
 
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="nombre">Nombre *</label>
+              {CAMPOS_PERSONALES.map((campo) => (
+                <div className="form-group" key={campo.name}>
+                  <label htmlFor={campo.name}>{campo.label}</label>
                   <input
-                    id="nombre" name="nombre" value={form.nombre}
-                    onChange={onChange} onBlur={onBlur}
-                    className={cls("nombre")} autoComplete="given-name"
+                    id={campo.name} name={campo.name} type={campo.type || "text"}
+                    value={form[campo.name]} onChange={onChange} onBlur={onBlur}
+                    className={cls(campo.name)}
+                    autoComplete={campo.autoComplete}
+                    maxLength={campo.maxLength}
+                    placeholder={campo.placeholder}
                   />
-                  {errors.nombre && <span className="error-message">{errors.nombre}</span>}
+                  {errors[campo.name] && <span className="error-message">{errors[campo.name]}</span>}
                 </div>
-
-                <div className="form-group">
-                  <label htmlFor="apellido">Apellido *</label>
-                  <input
-                    id="apellido" name="apellido" value={form.apellido}
-                    onChange={onChange} onBlur={onBlur}
-                    className={cls("apellido")} autoComplete="family-name"
-                  />
-                  {errors.apellido && <span className="error-message">{errors.apellido}</span>}
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="email">Email *</label>
-                  <input
-                    id="email" name="email" type="email" value={form.email}
-                    onChange={onChange} onBlur={onBlur}
-                    className={cls("email")} autoComplete="email"
-                  />
-                  {errors.email && <span className="error-message">{errors.email}</span>}
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="telefono">Teléfono (10 dígitos) *</label>
-                  <input
-                    id="telefono" name="telefono" inputMode="numeric" maxLength={10}
-                    value={form.telefono} onChange={onChange} onBlur={onBlur}
-                    className={cls("telefono")} placeholder="3511234567"
-                  />
-                  {errors.telefono && <span className="error-message">{errors.telefono}</span>}
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* --- Información del Vehículo --- */}
             <div className="form-seccion">
               <h2>Información del Vehículo</h2>
 
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="marca">Marca *</label>
+              {CAMPOS_VEHICULO.map((campo) => (
+                <div className="form-group" key={campo.name}>
+                  <label htmlFor={campo.name}>{campo.label}</label>
                   <input
-                    id="marca" name="marca" value={form.marca}
-                    onChange={onChange} onBlur={onBlur}
-                    className={cls("marca")}
+                    id={campo.name} name={campo.name}
+                    value={form[campo.name]} onChange={onChange} onBlur={onBlur}
+                    className={cls(campo.name)}
+                    placeholder={campo.placeholder}
                   />
-                  {errors.marca && <span className="error-message">{errors.marca}</span>}
+                  {errors[campo.name] && <span className="error-message">{errors[campo.name]}</span>}
                 </div>
+              ))}
 
-                <div className="form-group">
-                  <label htmlFor="modelo">Modelo *</label>
-                  <input
-                    id="modelo" name="modelo" value={form.modelo}
-                    onChange={onChange} onBlur={onBlur}
-                    className={cls("modelo")}
-                  />
-                  {errors.modelo && <span className="error-message">{errors.modelo}</span>}
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="patente">Patente *</label>
-                  <input
-                    id="patente" name="patente" value={form.patente}
-                    onChange={onChange} onBlur={onBlur}
-                    className={cls("patente")} placeholder="ABC123 o AA123BB"
-                  />
-                  {errors.patente && <span className="error-message">{errors.patente}</span>}
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="uso">Uso principal *</label>
-                  <select
-                    id="uso" name="uso" value={form.uso}
-                    onChange={onChange} onBlur={onBlur}
-                    className={cls("uso")}
-                  >
-                    <option value="">Seleccionar uso</option>
-                    <option value="urbano">Urbano</option>
-                    <option value="rural">Rural</option>
-                    <option value="ruta">Ruta</option>
-                  </select>
-                  {errors.uso && <span className="error-message">{errors.uso}</span>}
-                </div>
+              <div className="form-group">
+                <label htmlFor="uso">Uso principal *</label>
+                <select
+                  id="uso" name="uso" value={form.uso}
+                  onChange={onChange} onBlur={onBlur}
+                  className={cls("uso")}
+                >
+                  <option value="">Seleccionar uso</option>
+                  <option value="urbano">Urbano</option>
+                  <option value="rural">Rural</option>
+                  <option value="ruta">Ruta</option>
+                </select>
+                {errors.uso && <span className="error-message">{errors.uso}</span>}
               </div>
             </div>
 

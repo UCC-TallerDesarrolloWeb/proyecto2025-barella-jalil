@@ -60,6 +60,21 @@
         "audio"
       ],
       "importacion": "parlante"
+    },
+    {
+      "id": "9ee7",
+      "nombre": "carola",
+      "apellido": "jalil",
+      "email": "carolajalil8@gmail.com",
+      "telefono": "3512531666",
+      "marca": "fiat",
+      "modelo": "cronos",
+      "patente": "ABC123",
+      "uso": "rural",
+      "mejoras": [
+        "esteticas"
+      ],
+      "importacion": "paiosnaui"
     }
   ]
 }

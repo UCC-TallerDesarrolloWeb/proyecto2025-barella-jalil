@@ -187,7 +187,7 @@
 
     label { font-weight: 600; color: $color-text; }
 
-    input, select, textarea {
+    input:not([type="checkbox"]), select, textarea {
       background: $color-panel;
       color: $color-text;
       border: 1.5px solid $color-border;
@@ -198,6 +198,12 @@
         border-color: $color-accent;
         box-shadow: 0 0 0 3px rgba(255,122,0,.18);
       }
+    }
+
+    input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: $color-accent;
     }
   }
 
