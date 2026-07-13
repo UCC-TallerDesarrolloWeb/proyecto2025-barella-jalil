@@ -76,18 +76,19 @@
 
 ```text
 proyecto2025-barella-jalil/
-├── css/                      # Estilos CSS (1ª entrega)
-├── imagenes/                 # Imágenes optimizadas (logos, iconos, proyectos)
-├── js/                       # JavaScript (validaciones e interactividad)
-├── videos/                   # Videos mp4 / webm
-├── index.html                # Página principal (1ª entrega)
-├── quienes.html              # Quiénes Somos
-├── servicios.html            # Servicios
-├── servicio-instalacion.html # Detalle Instalación
-├── servicio-asesoramiento.html # Detalle Asesoramiento
-├── servicio-importacion.html # Detalle Importación
-├── proyectos.html            # Proyectos
-├── asesoramiento.html        # Formulario de asesoramiento
+├── primera-entrega/          # 1ª entrega – sitio estático
+│   ├── css/                  # Estilos CSS
+│   ├── js/                   # JavaScript (validaciones e interactividad)
+│   ├── mockup/                # Wireframes/mockups
+│   ├── sketch/                # Bocetos a mano
+│   ├── index.html             # Página principal
+│   ├── quienes.html           # Quiénes Somos
+│   ├── servicios.html         # Servicios
+│   ├── servicio-instalacion.html # Detalle Instalación
+│   ├── servicio-asesoramiento.html # Detalle Asesoramiento
+│   ├── servicio-importacion.html # Detalle Importación
+│   ├── proyectos.html         # Proyectos
+│   └── asesoramiento.html     # Formulario de asesoramiento
 ├── README.md                 # Documentación del proyecto
 └── frontend/                 # 2ª entrega – SPA con React + Vite
     ├── index.html            # Entry point de Vite
@@ -96,7 +97,8 @@ proyecto2025-barella-jalil/
     ├── vite.config.js
     ├── eslint.config.js
     ├── public/
-    │   └── imagenes/         # Assets públicos
+    │   ├── imagenes/         # Assets públicos (compartidos con la 1ª entrega)
+    │   └── videos/
     └── src/
         ├── main.jsx
         ├── App.jsx
@@ -111,7 +113,7 @@ proyecto2025-barella-jalil/
 
 ### 1️⃣ Primera entrega (estático)
 
-* Abrir `index.html` en el navegador
+* Abrir `primera-entrega/index.html` en el navegador
 * O usar Live Server
 
 ### 2️⃣ Segunda entrega (React + Vite)

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>PROCRAFT PARTS</title>
-  <meta name="description" content="Pestaña cin una breve descripcion de quines somos." />
+  <meta name="description" content="Pestaña de la tarjeta instalacion dentro de servicios." />
   <meta name="author" content="Máximo Barella y Carola Jalil" />
   <meta name="keywords" content="proyectos, accesorios 4x4, instalación, galería" />
 
-  <link rel="icon" href="frontend/public/imagenes/logos/logo.png" type="image/png" />
+  <link rel="icon" href="../frontend/public/imagenes/logos/logo.png" type="image/png" />
   <link rel="stylesheet" href="css/estilos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
     <div class="container header__wrap">
       <div class="logo">
         <a href="index.html" aria-label="Ir al inicio">
-          <img src="frontend/public/imagenes/logos/logotipo 3.png" alt="Logotipo de PROCRAFT PARTS">
+          <img src="../frontend/public/imagenes/logos/logotipo 3.png" alt="Logotipo de PROCRAFT PARTS">
         </a>
       </div>
       <h1 id="site-title" class="site-title">
@@ -31,9 +31,9 @@
       <nav id="nav" class="menu" role="navigation">
         <ul class="menu__list">
           <li><a href="index.html">INICIO</a></li>
-          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="servicios.html"class="activo">SERVICIOS</a></li>
           <li><a href="proyectos.html" >PROYECTOS</a></li>
-          <li><a href="quienes.html"class="activo">¿QUIÉNES SOMOS?</a></li>
+          <li><a href="quienes.html">¿QUIÉNES SOMOS?</a></li>
           <li><a href="asesoramiento.html" class="btn-asesoramiento">SOLICITAR ASESORAMIENTO</a></li>
         </ul>
       </nav>
@@ -41,26 +41,18 @@
     <div class="linea-naranja" aria-hidden="true"></div>
   </header>
 
-<section id="quienes-somos" class="about">
-  <div class="container">
-    <h1 class="about__title">Quiénes Somos</h1>
 
-    <p class="about__text">
-      Somos Lucas y Juan, ingenieros graduados en la UTN (uno mecánico y el otro informático).
-      Nuestra pasión por los fierros nos llevó a dedicarnos de lleno al mundo de la
-      <strong>personalización de vehículos</strong>. Decidimos diferenciarnos ofreciendo una
-      instalación profesional y cercana, realizada en la casa del cliente: vos no tenés que sacar
-      tu vehículo; nosotros vamos, te asesoramos y lo dejamos listo.
-    </p>
+<section class="servicio-page">
+  <img class="servicio-page__icon" src="../frontend/public/imagenes/iconos/herramienta.png" alt="Ícono de instalación">
 
-    <div class="about__media">
-      <figure class="about__img">
-        <img src="frontend/public/imagenes/quienes/quienes-somos.png" alt="Instalación a domicilio en vehículo del cliente" loading="lazy">
-      </figure>
-    </div>
+  <div class="container servicio-page__content">
+    <h1>Instalación Profesional</h1>
+    <p> En esta sección el usuario puede solicitar la instalación de accesorios o piezas en su vehículo, tanto si fueron adquiridos a través de Procraft Parts como de manera particular. El equipo técnico realiza la instalación aplicando protocolos de seguridad y precisión, asegurando un resultado óptimo y compatible con cada modelo. Además, se ofrece asesoramiento previo para definir el tipo de instalación más conveniente según el uso del vehículo.</p>
+    <a href="asesoramiento.html" class="btn-asesoramiento">Solicitar asesoramiento</a>
   </div>
 </section>
-  
+
+
 <footer class="footer" id="site-footer" role="contentinfo">
     <div class="linea-naranja" aria-hidden="true"></div>
     <div class="container footer__wrap">

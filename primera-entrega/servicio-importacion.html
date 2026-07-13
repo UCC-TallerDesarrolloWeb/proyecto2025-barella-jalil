@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>PROCRAFT PARTS</title>
-  <meta name="description" content="Pestaña de servicios." />
+  <title>PROCRAFT PARTS </title>
+  <meta name="description" content="Pestaña de la tarjeta importacion dentro de servicios." />
   <meta name="author" content="Máximo Barella y Carola Jalil" />
   <meta name="keywords" content="proyectos, accesorios 4x4, instalación, galería" />
 
-  <link rel="icon" href="frontend/public/imagenes/logos/logo.png" type="image/png" />
+  <link rel="icon" href="../frontend/public/imagenes/logos/logo.png" type="image/png" />
   <link rel="stylesheet" href="css/estilos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
     <div class="container header__wrap">
       <div class="logo">
         <a href="index.html" aria-label="Ir al inicio">
-          <img src="frontend/public/imagenes/logos/logotipo 3.png" alt="Logotipo de PROCRAFT PARTS">
+          <img src="../frontend/public/imagenes/logos/logotipo 3.png" alt="Logotipo de PROCRAFT PARTS">
         </a>
       </div>
       <h1 id="site-title" class="site-title">
@@ -41,34 +41,20 @@
     <div class="linea-naranja" aria-hidden="true"></div>
   </header>
 
-<section class="servicios" aria-labelledby="servicios-title">
-  <div class="container">
-    <h2 id="servicios-title">Nuestros Servicios</h2>
 
-    <div class="servicios__grid">
-      <article class="serv-card">
-        <img src="frontend/public/imagenes/iconos/comentario.png" alt="Asesoramiento personalizado">
-        <h3>Asesoramiento Personalizado</h3>
-        <p>Te guiamos en la elección de accesorios y soluciones a medida según tu vehículo y uso real.</p>
-        <a class="btn-asesoramiento" href="servicio-asesoramiento.html">Ver más</a>
-      </article>
+<section class="servicio-page">
+  <img class="servicio-page__icon" src="../frontend/public/imagenes/iconos/camion.png" alt="Ícono de instalación">
 
-      <article class="serv-card">
-        <img src="frontend/public/imagenes/iconos/camion.png" alt="Importación de accesorios">
-        <h3>Importación de Accesorios</h3>
-        <p>Traemos marcas y modelos específicos bajo pedido, con gestión completa de logística.</p>
-        <a class="btn-asesoramiento" href="servicio-importacion.html">Ver más</a>
-      </article>
-
-      <article class="serv-card">
-        <img src="frontend/public/imagenes/iconos/herramienta.png" alt="Instalación profesional">
-        <h3>Instalación Profesional</h3>
-        <p>Montaje prolijo y seguro, con garantía y estándares de taller para 4x4 y autos deportivos.</p>
-        <a class="btn-asesoramiento" href="servicio-instalacion.html">Ver más</a>
-      </article>
-    </div>
+  <div class="container servicio-page__content">
+    <h1>Importación de Accesorios</h1>
+    <p> En esta sección el usuario puede solicitar la importación de piezas o accesorios específicos para su vehículo.
+ Debe indicar el nombre del artículo o una referencia visual para identificarlo con precisión.
+ El equipo de Procraft Parts se encarga de gestionar la búsqueda, cotización, envío y seguimiento del pedido, garantizando que el accesorio llegue en condiciones y dentro del plazo acordado.
+  </p>
+    <a href="asesoramiento.html" class="btn-asesoramiento">Solicitar asesoramiento</a>
   </div>
 </section>
+
 <footer class="footer" id="site-footer" role="contentinfo">
     <div class="linea-naranja" aria-hidden="true"></div>
     <div class="container footer__wrap">
