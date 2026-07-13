@@ -26,6 +26,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .proyectos-home .galeria__item a {
@@ -77,6 +81,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
+
+    @media (max-width: $bp-mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .serv-card {
@@ -174,8 +182,12 @@
   #proyectos-title { margin: 0 0 28px; }
 
   .galeria__grid {
-    column-count: 3;        
-    column-gap: 22px;      
+    column-count: 3;
+    column-gap: 22px;
+
+    @media (max-width: $bp-mobile) {
+      column-count: 1;
+    }
   }
 
   .galeria__item {

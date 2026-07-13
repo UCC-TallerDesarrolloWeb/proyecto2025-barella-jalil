@@ -17,7 +17,7 @@ const API = "http://localhost:3001";   // puerto del json-server
  * @returns {Promise<Object>} Consulta creada (incluye id).
  */
 
-export async function crearConsulta(data) {
+export const crearConsulta = async (data) => {
   const r = await fetch(`${API}/consultas`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -25,4 +25,4 @@ export async function crearConsulta(data) {
   });
   if (!r.ok) throw new Error('Error POST');
   return r.json();
-}
+};

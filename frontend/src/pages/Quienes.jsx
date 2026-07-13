@@ -6,7 +6,7 @@
 
 import { Link } from "react-router-dom";
 
-export default function QuienesSomos() {
+const QuienesSomos = () => {
   return (
     <main id="quienes-somos" className="about">
       <div className="linea-naranja" aria-hidden="true" />
@@ -57,4 +57,6 @@ export default function QuienesSomos() {
       </section>
     </main>
   );
-}
+};
+
+export default QuienesSomos;

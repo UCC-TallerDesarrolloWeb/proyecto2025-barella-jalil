@@ -10,6 +10,10 @@
     justify-content: space-between;
     padding: 10px 0;
     gap: 2rem;
+
+    @media (max-width: $bp-mobile) {
+      flex-wrap: wrap;
+    }
   }
 
   .header__left {
@@ -40,9 +44,14 @@
     list-style: none;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1.25rem;
     margin: 0;
     padding: 0;
+
+    @media (max-width: $bp-mobile) {
+      justify-content: center;
+    }
 
     a {
       color: $color-text;

@@ -4,7 +4,7 @@ import icHerramienta from "@/assets/iconos/herramienta.png";
  * Detalle de servicio: Instalación Profesional.
  * @returns {JSX.Element}
  */
-export default function ServiciosInstalacion() {
+const ServiciosInstalacion = () => {
   return (
     <main className="servicio-page servicio-page--instal">
       {/* icono decorativo arriba-izquierda */}
@@ -34,4 +34,6 @@ export default function ServiciosInstalacion() {
       </section>
     </main>
   );
-}
+};
+
+export default ServiciosInstalacion;

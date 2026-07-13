@@ -8,7 +8,7 @@ import icHerramienta from "@/assets/iconos/herramienta.png";
  * Renderiza 3 tarjetas con CTA hacia las secciones de detalle.
  * @returns {JSX.Element}
  */
-function Servicios() {
+const Servicios = () => {
   return (
     <main className="servicios" aria-labelledby="servicios-title">
       {/* Cabecera visual de la sección (el header global ya lo tenés en el layout) */}
@@ -53,6 +53,6 @@ function Servicios() {
       </section>
     </main>
   );
-}
+};
 
 export default Servicios;

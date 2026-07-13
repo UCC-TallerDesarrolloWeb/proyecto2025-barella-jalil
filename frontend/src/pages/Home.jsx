@@ -1,7 +1,7 @@
 import "@/styles/main.scss";
 import Boton from "../components/Boton";
 
-function Home() {
+const Home = () => {
   return (
     <main className="home">
       
@@ -53,7 +53,7 @@ function Home() {
           <div>
             <h2 id="titulo-quienes-home">¿Quiénes somos?</h2>
             <p>Somos Lucas y Juan, ingenieros y familiares, con una gran pasión por los fierros.</p>
-              <Boton texto="Conocer mas" ruta="/Quienes" />
+              <Boton texto="Conocer mas" ruta="/quienes" />
           </div>
           <div>
             <img
@@ -68,6 +68,6 @@ function Home() {
 
     </main>
   );
-}
+};
 
 export default Home;

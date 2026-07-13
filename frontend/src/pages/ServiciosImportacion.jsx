@@ -4,7 +4,7 @@ import icCamion from "@/assets/iconos/camion.png";
  * Detalle de servicio: Importación de Accesorios.
  * @returns {JSX.Element}
  */
-export default function ServiciosImportacion() {
+const ServiciosImportacion = () => {
   return (
     <main className="servicio-page servicio-page--import">
       {/* icono decorativo arriba a la izquierda */}
@@ -27,10 +27,12 @@ export default function ServiciosImportacion() {
           el accesorio llegue en condiciones y dentro del plazo acordado.
         </p>
 
-        <Link className="btn-asesoramiento" to="/Asesoramiento">
+        <Link className="btn-asesoramiento" to="/asesoramiento">
           Solicitar asesoramiento
         </Link>
       </section>
     </main>
   );
-}
+};
+
+export default ServiciosImportacion;

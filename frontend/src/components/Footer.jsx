@@ -3,7 +3,7 @@
  * @returns {JSX.Element}
  */
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer" id="site-footer" role="contentinfo">
       <div className="linea-naranja" aria-hidden="true"></div>
@@ -31,6 +31,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

@@ -7,7 +7,7 @@ import ServiciosInstalacion from "@/pages/ServiciosInstalacion";
 import Proyectos from "@/pages/Proyectos";
 import Asesoramiento from "@/pages/Asesoramiento";
 import Quienes from "@/pages/Quienes";
-export default function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -25,4 +25,6 @@ export default function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
+
+export default App;

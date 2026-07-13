@@ -1,3 +1,19 @@
 {
-  "consultas": []
+  "consultas": [
+    {
+      "id": "b6ae",
+      "nombre": "carola",
+      "apellido": "jalil",
+      "email": "carolajalil8@gmail.com",
+      "telefono": "3512531666",
+      "marca": "fiat",
+      "modelo": "cronos",
+      "patente": "ABC123",
+      "uso": "urbano",
+      "mejoras": [
+        "esteticas"
+      ],
+      "importacion": "Me gustaria que tenga asientos de cuero"
+    }
+  ]
 }

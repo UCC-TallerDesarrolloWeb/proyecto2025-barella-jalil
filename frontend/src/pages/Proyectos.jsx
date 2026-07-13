@@ -1,5 +1,5 @@
 
-export default function Proyectos() {
+const Proyectos = () => {
   return (
     <main className="proyectos" aria-labelledby="proyectos-title">
       <section className="container" aria-label="Galería de proyectos">
@@ -151,4 +151,6 @@ export default function Proyectos() {
       </section>
     </main>
   );
-}
+};
+
+export default Proyectos;

@@ -6,7 +6,7 @@
 
 import { NavLink } from "react-router-dom";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <header className="header" id="site-header">
       <div className="container header__wrap">
@@ -20,8 +20,8 @@ function Navbar() {
             </NavLink>
           </div>
 
-          <h1 id="site-title" className="site-title">
-            <NavLink to="/">PROCRAFT PARTS</NavLink>
+          <h1 id="site-title" className="site-title sr-only">
+            PROCRAFT PARTS
           </h1>
         </div>
 
@@ -41,6 +41,6 @@ function Navbar() {
       <div className="linea-naranja" aria-hidden="true"></div>
     </header>
   );
-}
+};
 
 export default Navbar;

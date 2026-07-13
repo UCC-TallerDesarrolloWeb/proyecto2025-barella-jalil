@@ -6,7 +6,7 @@
 
 import { useNavigate } from "react-router-dom";
 
-function Boton({ texto, ruta, clase = "btn-asesoramiento" }) {
+const Boton = ({ texto, ruta, clase = "btn-asesoramiento" }) => {
   const navigate = useNavigate();
 
   return (
@@ -14,6 +14,6 @@ function Boton({ texto, ruta, clase = "btn-asesoramiento" }) {
       {texto}
     </button>
   );
-}
+};
 
 export default Boton;

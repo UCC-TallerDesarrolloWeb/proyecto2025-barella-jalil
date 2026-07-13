@@ -36,7 +36,7 @@ const initial = {
  * @returns {JSX.Element}
  */
 
-export default function Asesoramiento() {
+const Asesoramiento = () => {
   const [form, setForm] = useState(initial);
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
@@ -371,4 +371,6 @@ export default function Asesoramiento() {
       </section>
     </main>
   );
-}
+};
+
+export default Asesoramiento;

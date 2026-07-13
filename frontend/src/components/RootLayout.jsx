@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
  * Layout raíz con header, contenido (Outlet) y footer.
  * @returns {JSX.Element}
  */
-export default function RootLayout() {
+const RootLayout = () => {
   return (
     <>
       <Navbar />
@@ -13,4 +13,6 @@ export default function RootLayout() {
       <Footer />
     </>
   );
-}
+};
+
+export default RootLayout;
