@@ -1,30 +1,30 @@
-# ⚙️ PROCRAFT PARTS — Accesorios y Proyectos a tu Medida
+# PROCRAFT PARTS — Accesorios y Proyectos a tu Medida
 
 **Autores:** Máximo Barella · Carola Jalil
 **Materia:** Taller de Desarrollo Web — UCC (2025)
 
-**Sitio Web 
+**Sitio Web:**
 [https://ucc-tallerdesarrolloweb.github.io/proyecto2025-barella-jalil/](https://ucc-tallerdesarrolloweb.github.io/proyecto2025-barella-jalil/)
 
 
 ---
 
-## 📋 Índice
+## Índice
 
-* [Descripción](#-descripción)
-* [Contenido del Sitio](#-contenido-del-sitio)
-* [Stack Tecnológico](#-stack-tecnológico)
-* [Estructura del Repositorio](#-estructura-del-repositorio)
-* [Cómo Ejecutar](#-cómo-ejecutar)
-* [Ruteo y Componentes (2ª entrega)](#-ruteo-y-componentes-2ª-entrega)
-* [Validaciones y Accesibilidad](#-validaciones-y-accesibilidad)
-* [Buenas Prácticas y Calidad](#-buenas-prácticas-y-calidad)
-* [Autores](#-autores)
-* [Información Académica](#-información-académica)
+* [Descripción](#descripción)
+* [Contenido del Sitio](#contenido-del-sitio)
+* [Stack Tecnológico](#stack-tecnológico)
+* [Estructura del Repositorio](#estructura-del-repositorio)
+* [Cómo Ejecutar](#cómo-ejecutar)
+* [Ruteo y Componentes (2ª entrega)](#ruteo-y-componentes-2ª-entrega)
+* [Validaciones y Accesibilidad](#validaciones-y-accesibilidad)
+* [Buenas Prácticas y Calidad](#buenas-prácticas-y-calidad)
+* [Autores](#autores)
+* [Información Académica](#información-académica)
 
 ---
 
-## 🧾 Descripción
+## Descripción
 
 **PROCRAFT PARTS** es un sitio orientado a servicios de instalación profesional, asesoramiento técnico e importación de accesorios para autos y pickups.
 
@@ -35,7 +35,7 @@
 
 ---
 
-## 🧱 Contenido del Sitio
+## Contenido del Sitio
 
 ### Páginas principales
 
@@ -55,7 +55,7 @@
 
 ---
 
-## 💻 Stack Tecnológico
+## Stack Tecnológico
 
 | Tecnología         | Uso                                     |
 | ------------------ | --------------------------------------- |
@@ -70,9 +70,7 @@
 
 ---
 
-## 📂 Estructura del Repositorio
-
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```text
 proyecto2025-barella-jalil/
@@ -107,16 +105,16 @@ proyecto2025-barella-jalil/
         ├── components/       # Componentes reutilizables
         ├── pages/            # Vistas (Home, Servicios, Proyectos, etc.)
         └── styles/           # SCSS (_variables, _layout, _components, etc.)
+```
 
+## Cómo Ejecutar
 
-## 🛠️ Cómo Ejecutar
-
-### 1️⃣ Primera entrega (estático)
+### 1. Primera entrega (estático)
 
 * Abrir `primera-entrega/index.html` en el navegador
 * O usar Live Server
 
-### 2️⃣ Segunda entrega (React + Vite)
+### 2. Segunda entrega (React + Vite)
 
 ```bash
 cd frontend
@@ -126,7 +124,7 @@ npm run dev
 
 ---
 
-## 🧭 Ruteo y Componentes (2ª entrega)
+## Ruteo y Componentes (2ª entrega)
 
 ### Rutas principales
 
@@ -147,7 +145,7 @@ npm run dev
 
 ---
 
-## ✅ Validaciones y Accesibilidad
+## Validaciones y Accesibilidad
 
 * Validación en tiempo real en formularios
 * Uso de `label` asociado a cada input
@@ -157,7 +155,7 @@ npm run dev
 
 ---
 
-## 🧪 Buenas Prácticas y Calidad
+## Buenas Prácticas y Calidad
 
 * Sin estilos en línea
 * Sin imports innecesarios
@@ -167,7 +165,7 @@ npm run dev
 
 ---
 
-## 👥 Autores
+## Autores
 
 | Nombre         | Rol                                 |
 | -------------- | ----------------------------------- |
@@ -176,7 +174,7 @@ npm run dev
 
 ---
 
-## 🏫 Información Académica
+## Información Académica
 
 * **Universidad:** Universidad Católica de Córdoba
 * **Materia:** Taller de Desarrollo Web
