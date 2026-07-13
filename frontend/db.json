@@ -29,6 +29,37 @@
         "audio"
       ],
       "importacion": "mejorar el parlante"
+    },
+    {
+      "id": "25f9",
+      "nombre": "carola",
+      "apellido": "jalil",
+      "email": "carolajalil8@gmail.com",
+      "telefono": "3512531666",
+      "marca": "fiat",
+      "modelo": "cronos",
+      "patente": "ABC123",
+      "uso": "rural",
+      "mejoras": [
+        "esteticas",
+        "audio"
+      ],
+      "importacion": "mejoras en mi parlante"
+    },
+    {
+      "id": "e020",
+      "nombre": "carola",
+      "apellido": "jalil",
+      "email": "carolajalil8@gmail.com",
+      "telefono": "3512531666",
+      "marca": "fiat",
+      "modelo": "cronos",
+      "patente": "ABC123",
+      "uso": "rural",
+      "mejoras": [
+        "audio"
+      ],
+      "importacion": "parlante"
     }
   ]
 }

@@ -1,7 +1,39 @@
 @use "./variables" as *;
+
+/* Titulos de seccion: mismo tamaño y alineacion en todas las paginas */
+#servicios-title,
+#proyectos-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+/* Quienes Somos: mismo tamaño que el resto, pero alineado a la izquierda (va al lado de la imagen) */
+.about {
+  padding-top: 40px;
+}
+
+.about__title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* Home: mismo tamaño de titulo que el resto de las paginas */
+#home-hero .hero__texto h2,
+#titulo-proyectos-home,
+#titulo-quienes-home {
+  font-size: 2rem;
+}
+
+#home-hero .hero__texto h2 {
+  margin-bottom: .3rem;
+}
+
 /* HOME */
 #home-hero {
   scroll-margin-top: 80px;
+  background: linear-gradient(135deg, $color-bg 0%, $color-panel 100%);
+  padding: 32px 0;
 
   .hero__wrap { display: grid; gap: 24px; align-items: center; }
 
@@ -72,11 +104,6 @@
 .servicios {
   padding: 48px 0;
 
-  #servicios-title {
-    text-align: center;
-    margin-bottom: 32px;
-  }
-
   .servicios__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -134,7 +161,7 @@
 .asesoramiento-main { background: $color-bg; }
 
 .hero-asesoramiento {
-  background: $color-bg;
+  background: linear-gradient(135deg, $color-bg 0%, $color-panel 100%);
   text-align: center;
   padding: 48px 0 24px;
 
@@ -173,13 +200,36 @@
       }
     }
   }
+
+  .form-actions {
+    margin-top: 24px;
+  }
+
+  .form-status {
+    margin-top: 16px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: $shadow-default;
+
+    &--success {
+      background: rgba(39, 174, 96, .15);
+      border: 1.5px solid #27ae60;
+      color: #6fe3a0;
+    }
+
+    &--error {
+      background: rgba(231, 76, 60, .15);
+      border: 1.5px solid #e74c3c;
+      color: #ff8a80;
+    }
+  }
 }
 
 /* Masonry en Proyectos  */
 .proyectos {
   padding-top: 40px;
-
-  #proyectos-title { margin: 0 0 28px; }
 
   .galeria__grid {
     column-count: 3;

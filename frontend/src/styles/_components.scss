@@ -35,14 +35,18 @@ h1, h2, h3, .menu a, .btn, .social__label {
   font-size: 1rem;
 
   background: transparent;
-  color: $color-text;    
+  color: $color-text;
   cursor: pointer;
-  transition: background .25s ease, color .25s ease, border-color .25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
+  transition: background .25s ease, color .25s ease, border-color .25s ease,
+              transform .2s ease, box-shadow .2s ease;
 
   &:hover {
-    background: $color-accent; 
-    color: $color-bg-dark;     
+    background: $color-accent;
+    color: $color-bg-dark;
     border-color: $color-accent;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 102, 0, .35);
   }
 }
 

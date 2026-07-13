@@ -61,6 +61,7 @@ const Asesoramiento = () => {
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [status, setStatus] = useState("");
+  const [statusType, setStatusType] = useState("");
 
   useEffect(() => {
     const saved = localStorage.getItem("asesoramiento_prefill");
@@ -156,6 +157,12 @@ const Asesoramiento = () => {
     const name = e.target.name;
     const value = e.target.value;
 
+    // Si el usuario vuelve a completar el formulario, ocultamos el cartel anterior
+    if (status) {
+      setStatus("");
+      setStatusType("");
+    }
+
     // Normalizaciones por campo
     if (name === "telefono") {
       const onlyDigits = value.replace(/\D/g, "").slice(0, 10);
@@ -212,6 +219,11 @@ const Asesoramiento = () => {
     const checked = e.target.checked;
     const value = e.target.value;
 
+    if (status) {
+      setStatus("");
+      setStatusType("");
+    }
+
     setForm((f) => {
       const mejorasNuevas = f.mejoras.slice();
       if (checked) {
@@ -266,6 +278,7 @@ const Asesoramiento = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     setStatus("");
+    setStatusType("");
 
     // marcar todos como tocados y validar
     const allTouched = Object.keys(initial).reduce((acc, k) => (acc[k] = true, acc), {});
@@ -275,6 +288,9 @@ const Asesoramiento = () => {
     setErrors(eObj);
     if (Object.keys(eObj).length) return;
 
+    const confirmado = confirm("¿Estás seguro de enviar la consulta?");
+    if (!confirmado) return;
+
     try {
       localStorage.setItem(
         "asesoramiento_prefill",
@@ -283,11 +299,13 @@ const Asesoramiento = () => {
 
       await crearConsulta(form);
       setStatus("✅ Consulta enviada. ¡Te contactamos a la brevedad!");
+      setStatusType("success");
       setForm(initial);
       setErrors({});
       setTouched({});
     } catch {
       setStatus("❌ No se pudo enviar. Probá de nuevo.");
+      setStatusType("error");
     }
   };
 
@@ -444,8 +462,12 @@ const Asesoramiento = () => {
             </div>
 
             <div className="form-actions">
-              <button type="submit" className="btn-enviar">SOLICITAR ASESORAMIENTO</button>
-              <p className="form-status" aria-live="polite">{status}</p>
+              <button type="submit" className="btn-asesoramiento">Enviar formulario</button>
+              {status && (
+                <p className={"form-status form-status--" + statusType} aria-live="polite">
+                  {status}
+                </p>
+              )}
             </div>
           </form>
         </div>

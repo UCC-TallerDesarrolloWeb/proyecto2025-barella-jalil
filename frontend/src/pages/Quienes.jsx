@@ -9,8 +9,6 @@ import { Link } from "react-router-dom";
 const QuienesSomos = () => {
   return (
     <main id="quienes-somos" className="about">
-      <div className="linea-naranja" aria-hidden="true" />
-
       <section className="container">
         <h1 className="about__title">Quiénes Somos</h1>
 
