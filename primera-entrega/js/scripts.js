@@ -1,6 +1,21 @@
 /**
+ * Menu movil: abre y cierra la navegacion al tocar el boton hamburguesa (☰).
+ * Se ejecuta en todas las paginas, ya que el boton #menu-btn esta en el header de cada una.
+ */
+(() => {
+  const boton = document.getElementById('menu-btn');
+  const nav = document.getElementById('nav');
+  if (!boton || !nav) return;
+
+  boton.addEventListener('click', () => {
+    const abierto = nav.classList.toggle('menu-abierto');
+    boton.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+  });
+})();
+
+/**
  * Validaciones del formulario de asesoramiento.
- * 
+ *
  * @module formAsesoramiento
  * @description
  * Este script valida todos los campos del formulario con id `form-asesoramiento`.
